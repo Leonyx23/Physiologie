@@ -31,7 +31,7 @@ def load(src_dir):
     src = Path(src_dir)
     themen = [_modul(p).THEMA for p in sorted(src.glob('thema_*.py'))]
     sets = [_modul(p).FRAGEN for p in sorted(src.glob('fragen_*.py'))]
-    return dict(themen=themen, fragensets=sets,
+    return dict(themen=themen, fragensets=sets, abteilungen=_modul(src / 'abteilungen.py').ABTEILUNGEN,
                 quellen=_modul(src / 'quellen.py').QUELLEN,
                 neu=_modul(src / 'neu.py').NEU)
 
@@ -136,6 +136,13 @@ def validate(d):
             err.append(f'{wo}: id {i!r} doppelt (auch in {ids[i]})')
         ids[i] = wo
 
+    abt = set()
+    for a in d['abteilungen']:
+        if not (_text(a.get('id')) and _text(a.get('titel'))):
+            err.append(f'Abteilung {a!r}: id und titel nötig')
+        if a.get('titel') in abt:
+            err.append(f'Abteilung {a.get("titel")!r} doppelt')
+        abt.add(a.get('titel'))
     themen = set()
     for t in d['themen']:
         wo = f'Thema {t.get("id")}'
@@ -145,8 +152,10 @@ def validate(d):
         for k in ('id', 'titel', 'bereich'):
             if not _text(t.get(k)):
                 err.append(f'{wo}: {k} fehlt')
-        if not isinstance(t.get('razzia'), int):
+        if 'razzia' in t and not isinstance(t['razzia'], int):
             err.append(f'{wo}: razzia muss eine Zahl sein')
+        if t.get('bereich') not in abt:
+            err.append(f'{wo}: Abteilung {t.get("bereich")!r} steht nicht in abteilungen.py')
         seen(t.get('id'), wo)
         themen.add(t.get('id'))
         _abschnitte(t.get('lern'), quellen, wo, err)
@@ -186,7 +195,7 @@ def validate(d):
 
 
 def _json(d):
-    out = dict(themen=d['themen'], fragensets=d['fragensets'], neu=d['neu'],
+    out = dict(themen=d['themen'], fragensets=d['fragensets'], neu=d['neu'], abteilungen=d['abteilungen'],
                quellen={k: dict(t=v['t'], seiten=v['seiten']) for k, v in d['quellen'].items()})
     s = json.dumps(out, ensure_ascii=False, separators=(',', ':'))
     return s.replace('<', '\\u003c')

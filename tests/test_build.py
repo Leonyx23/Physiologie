@@ -20,6 +20,16 @@ def test_load_finds_everything():
     assert d['neu'][0]['id'] == '2026-11-26-start'
 
 
+def test_abteilungen_geladen():
+    assert [a['id'] for a in data()['abteilungen']] == ['stoffwechsel', 'leer']
+
+
+def test_unbekannte_abteilung():
+    d = data()
+    d['themen'][0]['bereich'] = 'Gibtsnicht'
+    assert any('Gibtsnicht' in e for e in build.validate(d))
+
+
 def test_validate_ok():
     assert build.validate(data()) == []
 

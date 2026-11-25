@@ -35,9 +35,10 @@ def test_alle_seiten_im_browser(tmp_path, w, scheme):
         errs = []
         pg.on('pageerror', lambda e: errs.append(str(e)))
         pg.on('console', lambda m: m.type == 'error' and errs.append(m.text))
-        hashes = ['#/lernen', '#/fragen', '#/abfragen', '#/suche', '#/neu']
+        hashes = ['#/lernen', '#/razzia', '#/abfragen', '#/suche', '#/neu']
         hashes += ['#/lernen/' + t['id'] for t in d['themen']]
-        hashes += ['#/fragen/' + s['id'] for s in d['fragensets']]
+        hashes += ['#/razzia/' + s['id'] for s in d['fragensets']]
+        hashes += ['#/razzia/thema/' + t['id'] for t in d['themen']]
         for h in hashes:
             pg.goto(url + h)
             pg.wait_for_selector('#app main')

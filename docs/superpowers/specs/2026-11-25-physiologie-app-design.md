@@ -62,3 +62,10 @@ Vorbild in Stil und Bedienung: ihr Muskelatlas (github.com/Leonyx23/muskelatlas)
 - Passwort: dasselbe wie beim Muskelatlas oder ein eigenes (beim ersten Hochladen fragen).
 - Gibt es für die 1. Razzia auch eine Fragensammlung?
 - GitHub Pages im Repository einschalten (Claude versucht es, sonst macht es die Nutzerin in den Einstellungen).
+
+## Änderung 25.11.2026 abends (Wunsch der Nutzerin)
+- **Lernen** ist nach **Abteilungen** geordnet (z. B. Stoffwechsel, Muskel, Training, Atmung, Herz und Kreislauf,
+  Blut und Immunsystem), nicht nach Razzia. Themen gehören keiner Razzia an.
+- **Razzia** ist ein eigener Reiter (ersetzt „Fragen“): Fragensammlungen „Razzia 1“, „Razzia 2“ …, dazu Fragen nach Thema.
+- Alle Skripte aus allen Ordnern (MK, 2. Razzia, Stoff 1. Razzia inkl. der Folien in den GoodNotes-Dateien)
+  werden zu Lernseiten verarbeitet. Razzia 1 (Fragen) kommt am 26.11.

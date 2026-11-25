@@ -71,3 +71,14 @@
 **Files:** Create `src/gate.html`, `src/protect.mjs` (aus Muskelatlas-Doc, Speicher `physiologie.zugang`, Titel „Physiologie“), `src/seal.mjs` (`enc|dec` für `quelle.enc`), `src/publish.sh`, `src/icons.py`; Repo: `index.html`, `sw.js` (Cache `physiologie-v1`, Netz zuerst für Navigation), `manifest.webmanifest`, `icon-180/192/512.png`, `quelle.enc`, `README.md`.
 - [ ] Passwort erfragen; protect; Klartext-grep (z. B. „Glykolyse“ darf nicht in index.html/quelle.enc stehen); Login per Playwright; `seal.mjs dec` ergibt identisches Archiv.
 - [ ] Nach OK: push, GitHub Pages einschalten (`gh api` oder Nutzerin), Live-Seite prüfen, Projekt-Doc aktualisieren.
+
+### Task 2b: Abteilungen und Reiter „Razzia“ (Änderung 25.11. abends)
+**Files:** Modify `tools/build.py`, `app/app.js`, `tests/*`; Create `inhalt/abteilungen.py`, `tests/fixtures/inhalt/abteilungen.py`.
+**Interfaces – Produces:** `ABTEILUNGEN = [dict(id, titel, kurz)]` (Reihenfolge = Anzeige); `THEMA.bereich` muss einem `titel` entsprechen; `THEMA.razzia` optional. Routen `#/razzia`, `#/razzia/<set>[/<frage>]`, `#/razzia/thema/<id>`; Reiter `data-tab="razzia"`.
+- [ ] Tests: Lernen zeigt `section.abteilung` je Abteilung mit Titel, keine Razzia-Überschrift; Reiter Razzia mit `.set-link`; Abfragen gruppiert nach Fragensammlung; Build-Fehler bei unbekannter Abteilung.
+- [ ] Umsetzen, Tests grün, Commit.
+
+### Task 5 (erweitert): Lernseiten aus allen Skripten
+- MK: Herz- und Kreislaufphysiologie (+ Kurzfassung, Grafiken, Blätter, Foto), Exkurs 5 → Abteilung „Herz und Kreislauf“.
+- Stoff 1 (PDFs in den GoodNotes-Anhängen): Blut, Immunsystem, Gerinnung, Vasokonstriktion, Transport von Atemgasen, Einführung → Abteilungen „Blut und Immunsystem“, „Atmung“, „Grundlagen“.
+- Pause mit Vorschau nach MK, dann Stoff 1.

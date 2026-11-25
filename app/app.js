@@ -131,7 +131,7 @@ function antwort(f) {
 }
 
 /* ---------- Ansichten ---------- */
-var TABS = [['lernen', 'Lernen'], ['fragen', 'Fragen'], ['abfragen', 'Abfragen'], ['suche', 'Suche'], ['neu', 'Neu']];
+var TABS = [['lernen', 'Lernen'], ['razzia', 'Razzia'], ['abfragen', 'Abfragen'], ['suche', 'Suche'], ['neu', 'Neu']];
 function shell(tab, view, inhalt) {
   var neuNeu = D.neu.length && store.get('neu') !== D.neu[0].id;
   app.textContent = '';
@@ -147,22 +147,24 @@ function shell(tab, view, inhalt) {
 }
 function zurueck(href, text) { return el('a', { class: 'zurueck', href: href, text: '← ' + text }); }
 
-function razzien(list) {
-  var r = {};
-  list.forEach(function (x) { (r[x.razzia] = r[x.razzia] || []).push(x); });
-  return Object.keys(r).sort(function (a, b) { return a - b; }).map(function (k) { return [k, r[k]]; });
+
+function abteilungen(themen) {
+  return D.abteilungen.map(function (a) {
+    return [a, themen.filter(function (t) { return t.bereich === a.titel; })];
+  }).filter(function (g) { return g[1].length; });
 }
 
 function vLernen() {
   shell('lernen', 'lernen', [
     el('h1', { text: 'Lernen' }),
-    D.themen.length ? razzien(D.themen).map(function (g) {
-      return el('section', { class: 'gruppe' }, el('h2', { text: g[0] + '. Razzia' }),
+    D.themen.length ? abteilungen(D.themen).map(function (g) {
+      return el('section', { class: 'gruppe abteilung', 'data-abteilung': g[0].id }, el('h2', { text: g[0].titel }),
+        g[0].kurz ? el('p', { class: 'meta', text: g[0].kurz }) : null,
         el('div', { class: 'karten' }, g[1].map(function (t) {
           return el('a', { class: 'karte-l thema-link', href: '#/lernen/' + t.id, 'data-thema': t.id },
             el('span', { class: 'k-t', text: t.titel }),
-            el('span', { class: 'k-m', text: t.bereich + (t.fragen.length ? ' · ' + plural(t.fragen.length, 'Frage', 'Fragen') : '') }),
-            t.kurz ? el('span', { class: 'k-k', text: t.kurz }) : null);
+            t.kurz ? el('span', { class: 'k-k', text: t.kurz }) : null,
+            t.fragen.length ? el('span', { class: 'k-m', text: plural(t.fragen.length, 'Razzia-Frage', 'Razzia-Fragen') }) : null);
         })));
     }) : el('p', { class: 'leer', text: 'Noch keine Themen.' })
   ]);
@@ -174,14 +176,14 @@ function vThema(t) {
   shell('lernen', 'thema', [
     zurueck('#/lernen', 'Alle Themen'),
     el('h1', { text: t.titel }),
-    el('p', { class: 'meta', text: t.bereich + ' · ' + t.razzia + '. Razzia' }),
+    el('p', { class: 'meta', text: 'Abteilung ' + t.bereich }),
     heads.length > 2 ? el('nav', { class: 'inhalt', 'aria-label': 'Inhalt' }, heads.map(function (x) {
       return el('button', { type: 'button', on: { click: function () { x[1].scrollIntoView({ behavior: 'smooth', block: 'start' }); } } },
         x[0].replace(/\*\*/g, ''));
     })) : null,
     secs,
     t.fragen.length ? el('div', { class: 'thema-fragen' },
-      el('a', { href: '#/fragen/thema/' + t.id, text: 'Fragen zu diesem Thema (' + t.fragen.length + ') →' })) : null
+      el('a', { href: '#/razzia/thema/' + t.id, text: 'Razzia-Fragen zu diesem Thema (' + t.fragen.length + ') →' })) : null
   ]);
 }
 
@@ -220,30 +222,33 @@ function alleKnopf() {
   } } }, 'Alle aufdecken');
 }
 
-function vFragen() {
+function vRazzia() {
   var stand = store.get('stand', {});
   function gewusst(list) { return list.filter(function (f) { return stand[f.id] && stand[f.id].ok; }).length; }
-  shell('fragen', 'fragen', [
-    el('h1', { text: 'Fragen' }),
-    D.fragensets.length ? el('section', { class: 'gruppe' }, el('h2', { text: 'Fragensammlungen' }),
-      el('div', { class: 'karten' }, D.fragensets.map(function (s) {
-        return el('a', { class: 'karte-l set-link', href: '#/fragen/' + s.id, 'data-set': s.id },
-          el('span', { class: 'k-t', text: s.titel }),
-          el('span', { class: 'k-m', text: plural(s.fragen.length, 'Frage', 'Fragen') + ' · ' + gewusst(s.fragen) + ' gewusst' }),
-          s.kurz ? el('span', { class: 'k-k', text: s.kurz }) : null);
-      }))) : el('p', { class: 'leer', text: 'Noch keine Fragen.' }),
-    el('section', { class: 'gruppe' }, el('h2', { text: 'Nach Thema' }),
-      el('div', { class: 'karten' }, D.themen.filter(function (t) { return t.fragen.length; }).map(function (t) {
-        return el('a', { class: 'karte-l', href: '#/fragen/thema/' + t.id },
-          el('span', { class: 'k-t', text: t.titel }),
-          el('span', { class: 'k-m', text: plural(t.fragen.length, 'Frage', 'Fragen') + ' · ' + gewusst(t.fragen) + ' gewusst' }));
-      })))
+  var mitFragen = D.themen.filter(function (t) { return t.fragen.length; });
+  shell('razzia', 'razzia', [
+    el('h1', { text: 'Razzia' }),
+    el('p', { class: 'meta', text: 'Die Fragensammlungen mit geprüften Antworten. Antippen zum Aufdecken – oder unter „Abfragen“ üben.' }),
+    D.fragensets.length ? el('div', { class: 'karten' }, D.fragensets.map(function (s) {
+      return el('a', { class: 'karte-l set-link', href: '#/razzia/' + s.id, 'data-set': s.id },
+        el('span', { class: 'k-t', text: s.titel }),
+        s.kurz ? el('span', { class: 'k-k', text: s.kurz }) : null,
+        el('span', { class: 'k-m', text: plural(s.fragen.length, 'Frage', 'Fragen') + ' · ' + gewusst(s.fragen) + ' gewusst' }));
+    })) : el('p', { class: 'leer', text: 'Noch keine Fragen.' }),
+    mitFragen.length ? el('section', { class: 'gruppe' }, el('h2', { text: 'Nach Thema' }),
+      abteilungen(mitFragen).map(function (g) {
+        return el('div', null, el('h3', { text: g[0].titel }), el('div', { class: 'karten' }, g[1].map(function (t) {
+          return el('a', { class: 'karte-l', href: '#/razzia/thema/' + t.id },
+            el('span', { class: 'k-t', text: t.titel }),
+            el('span', { class: 'k-m', text: plural(t.fragen.length, 'Frage', 'Fragen') + ' · ' + gewusst(t.fragen) + ' gewusst' }));
+        })));
+      })) : null
   ]);
 }
 
 function vSet(titel, sub, fragen, offenId, back) {
-  shell('fragen', 'set', [
-    zurueck(back || '#/fragen', 'Alle Fragen'),
+  shell('razzia', 'set', [
+    zurueck(back || '#/razzia', 'Razzia'),
     el('h1', { text: titel }),
     el('p', { class: 'meta', text: sub }),
     el('div', { class: 'leiste' }, el('span', { class: 'hinweis', text: 'Frage antippen zum Aufdecken' }), alleKnopf()),
@@ -262,25 +267,30 @@ function mischen(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floo
 var wahl = null;
 function vAbfragen() {
   if (Q && !Q.fertig) return vKarte();
-  if (!wahl) { wahl = {}; D.themen.forEach(function (t) { if (t.fragen.length) wahl[t.id] = true; }); }
+  var gruppen = D.fragensets.map(function (s) {
+    var ts = [];
+    s.fragen.forEach(function (f) { if (ts.indexOf(f.thema) < 0) ts.push(f.thema); });
+    return [s, ts.map(function (id) { return { key: s.id + '|' + id, titel: THEMA[id] ? THEMA[id].titel : id,
+      fragen: s.fragen.filter(function (f) { return f.thema === id; }) }; })];
+  });
+  if (!wahl) { wahl = {}; gruppen.forEach(function (g) { g[1].forEach(function (x) { wahl[x.key] = true; }); }); }
   var nurUnsicher = { v: false };
-  var themen = D.themen.filter(function (t) { return t.fragen.length; });
   shell('abfragen', 'abfragen', [
     el('h1', { text: 'Abfragen' }),
-    el('p', { class: 'meta', text: 'Wähle die Themen. Die Fragen kommen gemischt. Was du nicht wusstest, kommt am Ende noch einmal.' }),
-    themen.length ? razzien(themen).map(function (g) {
-      return el('fieldset', { class: 'wahl' }, el('legend', { text: g[0] + '. Razzia' }), g[1].map(function (t) {
-        return el('label', null, el('input', { type: 'checkbox', checked: !!wahl[t.id], on: { change: function () { wahl[t.id] = this.checked; } } }),
-          el('span', { text: t.titel }), el('span', { class: 'anz', text: t.fragen.length }));
+    el('p', { class: 'meta', text: 'Wähle, was du üben willst. Die Fragen kommen gemischt. Was du nicht wusstest, kommt am Ende noch einmal.' }),
+    gruppen.map(function (g) {
+      return el('fieldset', { class: 'wahl' }, el('legend', { text: g[0].titel }), g[1].map(function (x) {
+        return el('label', null, el('input', { type: 'checkbox', checked: !!wahl[x.key], on: { change: function () { wahl[x.key] = this.checked; } } }),
+          el('span', { text: x.titel }), el('span', { class: 'anz', text: x.fragen.length }));
       }));
-    }) : null,
+    }),
     el('label', { class: 'opt' }, el('input', { type: 'checkbox', on: { change: function () { nurUnsicher.v = this.checked; } } }),
       el('span', { text: 'Nur Fragen, die ich noch nicht gewusst habe' })),
     el('div', { class: 'meldung' }),
     el('button', { type: 'button', id: 'start', class: 'knopf', text: 'Los geht’s', on: { click: function () {
       var stand = store.get('stand', {});
       var fr = [];
-      themen.forEach(function (t) { if (wahl[t.id]) fr = fr.concat(t.fragen); });
+      gruppen.forEach(function (g) { g[1].forEach(function (x) { if (wahl[x.key]) fr = fr.concat(x.fragen); }); });
       if (nurUnsicher.v) fr = fr.filter(function (f) { return !(stand[f.id] && stand[f.id].ok); });
       if (!fr.length) {
         var m = document.querySelector('.meldung');
@@ -335,7 +345,7 @@ function vEnde() {
       el('h1', { text: 'Geschafft!' }),
       el('p', { class: 'gross', text: Q.gewusst + ' von ' + Q.n + ' beim ersten Mal gewusst' }),
       falsch.length ? el('div', null, el('h2', { text: 'Diese solltest du noch üben' }),
-        el('ul', null, falsch.map(function (f) { return el('li', null, el('a', { href: '#/fragen/' + f.set + '/' + f.id }, rich(f.f))); }))) : null,
+        el('ul', null, falsch.map(function (f) { return el('li', null, el('a', { href: '#/razzia/' + f.set + '/' + f.id }, rich(f.f))); }))) : null,
       el('div', { class: 'leiste' },
         falsch.length ? el('button', { type: 'button', class: 'knopf', text: 'Die ' + falsch.length + ' üben', on: { click: function () { starte(falsch); } } }) : null,
         el('button', { type: 'button', class: 'knopf leise', text: 'Neue Abfrage', on: { click: function () { Q = null; vAbfragen(); } } })))
@@ -361,7 +371,7 @@ function index() {
   INDEX = [];
   D.themen.forEach(function (t) { var txt = t.titel + ' · ' + textVon(t.lern); INDEX.push({ art: 'Lernseite', titel: t.titel, href: '#/lernen/' + t.id, txt: txt, n: normMap(txt) }); });
   D.fragensets.forEach(function (s) { s.fragen.forEach(function (f) {
-    var txt = f.f + ' · ' + textVon(f.abb || []) + ' · ' + textVon(f.a); INDEX.push({ art: s.titel + ', Frage ' + f.nr, titel: f.f.replace(/\*\*/g, ''), href: '#/fragen/' + s.id + '/' + f.id, txt: txt, n: normMap(txt) });
+    var txt = f.f + ' · ' + textVon(f.abb || []) + ' · ' + textVon(f.a); INDEX.push({ art: s.titel + ', Frage ' + f.nr, titel: f.f.replace(/\*\*/g, ''), href: '#/razzia/' + s.id + '/' + f.id, txt: txt, n: normMap(txt) });
   }); });
   return INDEX;
 }
@@ -407,20 +417,20 @@ function route() {
   if (top !== 'abfragen' && Q && Q.fertig) Q = null;
   if (top === 'lernen' && !h[1]) return vLernen();
   if (top === 'lernen' && THEMA[h[1]]) return vThema(THEMA[h[1]]);
-  if (top === 'fragen' && !h[1]) return vFragen();
-  if (top === 'fragen' && h[1] === 'thema' && THEMA[h[2]]) {
+  if (top === 'razzia' && !h[1]) return vRazzia();
+  if (top === 'razzia' && h[1] === 'thema' && THEMA[h[2]]) {
     var t = THEMA[h[2]];
-    return vSet(t.titel, 'Fragen aus allen Sammlungen zu diesem Thema', t.fragen, null, '#/fragen');
+    return vSet(t.titel, 'Razzia-Fragen aus allen Sammlungen zu diesem Thema', t.fragen, null, '#/razzia');
   }
-  if (top === 'fragen' && SET[h[1]]) {
+  if (top === 'razzia' && SET[h[1]]) {
     var s = SET[h[1]];
-    return vSet(s.titel, s.razzia + '. Razzia · ' + plural(s.fragen.length, 'Frage', 'Fragen'), s.fragen, FRAGE[h[2]] ? h[2] : null);
+    return vSet(s.titel, plural(s.fragen.length, 'Frage', 'Fragen'), s.fragen, FRAGE[h[2]] ? h[2] : null);
   }
   if (top === 'abfragen') return vAbfragen();
   if (top === 'suche') return vSuche();
   if (top === 'neu') return vNeu();
   location.replace('#/lernen');
 }
-window.addEventListener('hashchange', function () { route(); if (!/^#\/fragen\/[^/]+\/./.test(location.hash)) window.scrollTo(0, 0); });
+window.addEventListener('hashchange', function () { route(); if (!/^#\/razzia\/[^/]+\/./.test(location.hash)) window.scrollTo(0, 0); });
 route();
 })();

@@ -51,7 +51,7 @@ def no_overflow(pg):
 def test_alle_reiter(browser, url, w, h, scheme):
     pg = new_page(browser, w, h, scheme)
     go(pg, url, '')
-    for tab in ['lernen', 'fragen', 'abfragen', 'suche', 'neu']:
+    for tab in ['lernen', 'razzia', 'abfragen', 'suche', 'neu']:
         pg.click(f'nav.tabs a[data-tab="{tab}"]')
         pg.wait_for_selector(f'main[data-view="{tab}"]')
         no_overflow(pg)
@@ -62,9 +62,13 @@ def test_alle_reiter(browser, url, w, h, scheme):
 def test_lernseite(browser, url, w, h, scheme):
     pg = new_page(browser, w, h, scheme)
     go(pg, url, '#/lernen')
+    assert pg.inner_text('section.abteilung h2') == 'Stoffwechsel'
+    assert not any('Razzia' in h for h in pg.locator('main h2').all_inner_texts())
+    assert pg.locator('section.abteilung').count() == 1  # leere Abteilung wird nicht gezeigt
     pg.click('.thema-link[data-thema="energie"]')
     pg.wait_for_selector('main[data-view="thema"]')
     assert pg.inner_text('main h1') == 'Energiestoffwechsel'
+    assert 'Stoffwechsel' in pg.inner_text('main .meta')
     for sel in ['.abschnitt', '.fl', '.fl.loop', '.br', '.ly', '.merke', 'table', 'b']:
         assert pg.locator(sel).count() > 0, sel
     assert 'Test </script> bleibt Text.' in pg.inner_text('.merke')
@@ -77,7 +81,8 @@ def test_lernseite(browser, url, w, h, scheme):
 
 def test_fragen_aufdecken(browser, url):
     pg = new_page(browser)
-    go(pg, url, '#/fragen')
+    go(pg, url, '#/razzia')
+    pg.wait_for_selector('main[data-view="razzia"]')
     pg.click('.set-link[data-set="test"]')
     pg.wait_for_selector('.frage[data-id="t1"]')
     assert not pg.is_visible('.frage[data-id="t1"] .antwort')
@@ -117,6 +122,13 @@ def test_abfragen_durchlauf(browser, url):
     assert abb >= 1
     stand = pg.evaluate("JSON.parse(localStorage.getItem('physiologie.stand'))")
     assert set(stand) == {'t1', 't2', 't3', 't4'}
+    assert pg.errors == []
+
+
+def test_abfragen_nach_sammlung(browser, url):
+    pg = new_page(browser)
+    go(pg, url, '#/abfragen')
+    assert pg.inner_text('fieldset.wahl legend') == 'Testrazzia'
     assert pg.errors == []
 
 

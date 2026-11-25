@@ -86,8 +86,10 @@ def test_fragen_aufdecken(browser, url):
     assert 'Quelle: Testskript A, S. 3' in pg.inner_text('.frage[data-id="t1"]')
     assert pg.is_visible('.frage[data-id="t3"] .frage-abb')
     assert pg.inner_text('.frage[data-id="t3"] .nr') == 'III.6a'
+    assert pg.locator('.frage[data-id="t4"] details.frage-abb:not([open])').count() == 1
+    assert 'wie bei III.6a' in pg.inner_text('.frage[data-id="t4"] details.frage-abb summary')
     pg.click('#alle')
-    assert pg.locator('.frage .antwort:visible').count() == 3
+    assert pg.locator('.frage .antwort:visible').count() == 4
     assert 'korrigiert' in pg.inner_text('.frage[data-id="t2"] .korr').lower()
     pg.click('#alle')
     assert pg.locator('.frage .antwort:visible').count() == 0
@@ -111,10 +113,10 @@ def test_abfragen_durchlauf(browser, url):
         pg.click('#nochmal' if seen == 0 else '#gewusst')
         seen += 1
         assert seen < 10
-    assert seen == 4  # 3 Fragen + 1 Wiederholung
+    assert seen == 5  # 4 Fragen + 1 Wiederholung
     assert abb >= 1
     stand = pg.evaluate("JSON.parse(localStorage.getItem('physiologie.stand'))")
-    assert set(stand) == {'t1', 't2', 't3'}
+    assert set(stand) == {'t1', 't2', 't3', 't4'}
     assert pg.errors == []
 
 

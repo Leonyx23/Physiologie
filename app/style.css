@@ -46,7 +46,7 @@ h3{font-size:16px;margin:14px 0 6px}
 /* Lernformat */
 .inhalt{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 6px}
 .inhalt button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 11px;font-size:14px;cursor:pointer}
-.abschnitt{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 16px 12px;margin:12px 0;box-shadow:var(--shadow);overflow-wrap:anywhere}
+.abschnitt{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 16px 12px;margin:12px 0;box-shadow:var(--shadow);overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
 .abschnitt>h2:first-child{margin-top:12px}
 .abschnitt ul{margin:8px 0;padding-left:20px}
 .abschnitt li{margin:4px 0}
@@ -123,6 +123,7 @@ th{background:var(--soft);font-weight:700}
 .frage-abb{padding:0 14px 0 50px}
 .frage-abb .abschnitt{box-shadow:none;margin:4px 0 8px;padding:2px 12px 8px;background:var(--field)}
 .karte .frage-abb{padding:0}
+details.frage-abb summary{cursor:pointer;font-size:14px;color:var(--accent);font-weight:600;padding:2px 0 8px}
 .nr{padding:0 5px}
 .frage-meta{display:flex;gap:10px;flex-wrap:wrap;padding:0 14px 12px 50px;font-size:13px}
 .zum-thema{color:var(--muted)}
@@ -148,7 +149,7 @@ th{background:var(--soft);font-weight:700}
 #start{width:100%;margin-top:10px;font-size:17px}
 .fortschritt{height:6px;background:var(--line);border-radius:999px;overflow:hidden;margin:4px 0 14px}
 .fortschritt div{height:100%;background:var(--accent)}
-.karte{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow);overflow-wrap:anywhere}
+.karte{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow);overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
 .k-meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin-bottom:8px}
 .k-frage{font:600 21px/1.3 var(--serif)}
 .karte .antwort{display:none;border-top:1px dashed var(--line);margin-top:12px;padding-top:4px}

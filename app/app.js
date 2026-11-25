@@ -117,13 +117,16 @@ function abschnitt(a, tag) {
   if (a.q) box.appendChild(quelle(a.q));
   return box;
 }
-function abbildung(f) {
-  return f.abb ? el('div', { class: 'frage-abb' }, f.abb.map(function (a) { return abschnitt(a, 'h3'); })) : null;
+function abbildung(f, wieBei) {
+  if (!f.abb) return null;
+  var inhalt = f.abb.map(function (a) { return abschnitt(a, 'h3'); });
+  if (wieBei) return el('details', { class: 'frage-abb' }, el('summary', { text: 'Abbildung wie bei ' + wieBei + ' – antippen zum Zeigen' }), inhalt);
+  return el('div', { class: 'frage-abb' }, inhalt);
 }
 function antwort(f) {
   return el('div', { class: 'antwort' },
     f.a.map(function (a) { return abschnitt(a, 'h3'); }),
-    f.korr ? el('div', { class: 'korr' }, el('div', { class: 'korr-k', text: '✎ Korrigiert gegenüber der Vorlage' }), liste(f.korr)) : null,
+    f.korr ? el('div', { class: 'korr' }, el('div', { class: 'korr-k', text: '✎ Korrigiert und ergänzt' }), liste(f.korr)) : null,
     quelle(f.q));
 }
 
@@ -183,15 +186,18 @@ function vThema(t) {
 }
 
 function fragenListe(fragen, offenId) {
-  var stand = store.get('stand', {});
+  var stand = store.get('stand', {}), vorAbb = null, vorNr = null;
   return el('div', { class: 'fragen' }, fragen.map(function (f) {
+    var abbKey = f.abb ? JSON.stringify(f.abb) : null, wieBei = abbKey && abbKey === vorAbb ? vorNr : null;
+    if (abbKey && !wieBei) { vorAbb = abbKey; vorNr = f.nr; }
+    if (!abbKey) vorAbb = null;
     var s = stand[f.id], th = THEMA[f.thema];
     var box = el('div', { class: 'frage' + (f.id === offenId ? ' offen' : ''), 'data-id': f.id });
     box.appendChild(el('button', { type: 'button', class: 'frage-f', 'aria-expanded': f.id === offenId ? 'true' : 'false',
       on: { click: function () { var o = box.classList.toggle('offen'); this.setAttribute('aria-expanded', o); alleText(); } } },
       el('span', { class: 'nr', text: f.nr }), el('span', { class: 'ft' }, rich(f.f)),
       s ? el('span', { class: 'st' + (s.ok ? ' ok' : ''), title: s.ok ? 'schon gewusst' : 'noch üben', text: s.ok ? '✓' : '•' }) : null));
-    var ab = abbildung(f);
+    var ab = abbildung(f, wieBei);
     if (ab) box.appendChild(ab);
     box.appendChild(el('div', { class: 'frage-meta' },
       th ? el('a', { class: 'zum-thema', href: '#/lernen/' + th.id, text: th.titel }) : null,

@@ -1,0 +1,7 @@
+# Inhalte nur verschlüsselt (quelle.enc) ins Repository
+inhalt/
+build/
+.superpowers/
+__pycache__/
+.pytest_cache/
+*.pyc

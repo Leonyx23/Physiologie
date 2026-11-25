@@ -81,6 +81,18 @@ def test_bar_value_must_be_number():
     assert any('Balken' in e for e in build.validate(d))
 
 
+def test_abb_checked_like_sections():
+    d = data()
+    d['fragensets'][0]['fragen'][2]['abb'] = [dict(h='x', yy=1)]
+    assert any('yy' in e for e in build.validate(d))
+
+
+def test_nr_must_be_text():
+    d = data()
+    d['fragensets'][0]['fragen'][2]['nr'] = ''
+    assert any('nr' in e for e in build.validate(d))
+
+
 def test_build_embeds_json(tmp_path):
     out = build.build(FIX, tmp_path)
     html = (tmp_path / 'vorschau.html').read_text(encoding='utf-8')

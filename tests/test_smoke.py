@@ -84,6 +84,8 @@ def test_fragen_aufdecken(browser, url):
     pg.click('.frage[data-id="t1"] .frage-f')
     assert pg.is_visible('.frage[data-id="t1"] .antwort')
     assert 'Quelle: Testskript A, S. 3' in pg.inner_text('.frage[data-id="t1"]')
+    assert pg.is_visible('.frage[data-id="t3"] .frage-abb')
+    assert pg.inner_text('.frage[data-id="t3"] .nr') == 'III.6a'
     pg.click('#alle')
     assert pg.locator('.frage .antwort:visible').count() == 3
     assert 'korrigiert' in pg.inner_text('.frage[data-id="t2"] .korr').lower()
@@ -98,15 +100,19 @@ def test_abfragen_durchlauf(browser, url):
     pg = new_page(browser)
     go(pg, url, '#/abfragen')
     pg.click('#start')
-    seen = 0
+    seen, abb = 0, 0
     while pg.locator('.ende').count() == 0:
         pg.wait_for_selector('.karte .k-frage')
+        if pg.locator('.karte .frage-abb').count():
+            assert pg.is_visible('.karte .frage-abb')
+            abb += 1
         pg.click('#zeigen')
         assert pg.is_visible('.karte .antwort')
         pg.click('#nochmal' if seen == 0 else '#gewusst')
         seen += 1
         assert seen < 10
     assert seen == 4  # 3 Fragen + 1 Wiederholung
+    assert abb >= 1
     stand = pg.evaluate("JSON.parse(localStorage.getItem('physiologie.stand'))")
     assert set(stand) == {'t1', 't2', 't3'}
     assert pg.errors == []

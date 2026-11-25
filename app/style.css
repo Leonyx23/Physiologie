@@ -120,6 +120,10 @@ th{background:var(--soft);font-weight:700}
 .ft{flex:1}
 .st{flex:none;font-weight:800;color:var(--muted)}
 .st.ok{color:var(--ok)}
+.frage-abb{padding:0 14px 0 50px}
+.frage-abb .abschnitt{box-shadow:none;margin:4px 0 8px;padding:2px 12px 8px;background:var(--field)}
+.karte .frage-abb{padding:0}
+.nr{padding:0 5px}
 .frage-meta{display:flex;gap:10px;flex-wrap:wrap;padding:0 14px 12px 50px;font-size:13px}
 .zum-thema{color:var(--muted)}
 .korr-tag{color:var(--korr-l);font-weight:700}

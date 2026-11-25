@@ -21,7 +21,7 @@ var THEMA = {}, SET = {}, FRAGE = {};
 D.themen.forEach(function (t) { THEMA[t.id] = t; t.fragen = []; });
 D.fragensets.forEach(function (s) {
   SET[s.id] = s;
-  s.fragen.forEach(function (f, i) { f.set = s.id; f.nr = i + 1; FRAGE[f.id] = f; if (THEMA[f.thema]) THEMA[f.thema].fragen.push(f); });
+  s.fragen.forEach(function (f, i) { f.set = s.id; f.nr = f.nr || String(i + 1); FRAGE[f.id] = f; if (THEMA[f.thema]) THEMA[f.thema].fragen.push(f); });
 });
 
 /* ---------- DOM-Helfer ---------- */
@@ -117,6 +117,9 @@ function abschnitt(a, tag) {
   if (a.q) box.appendChild(quelle(a.q));
   return box;
 }
+function abbildung(f) {
+  return f.abb ? el('div', { class: 'frage-abb' }, f.abb.map(function (a) { return abschnitt(a, 'h3'); })) : null;
+}
 function antwort(f) {
   return el('div', { class: 'antwort' },
     f.a.map(function (a) { return abschnitt(a, 'h3'); }),
@@ -188,6 +191,8 @@ function fragenListe(fragen, offenId) {
       on: { click: function () { var o = box.classList.toggle('offen'); this.setAttribute('aria-expanded', o); alleText(); } } },
       el('span', { class: 'nr', text: f.nr }), el('span', { class: 'ft' }, rich(f.f)),
       s ? el('span', { class: 'st' + (s.ok ? ' ok' : ''), title: s.ok ? 'schon gewusst' : 'noch üben', text: s.ok ? '✓' : '•' }) : null));
+    var ab = abbildung(f);
+    if (ab) box.appendChild(ab);
     box.appendChild(el('div', { class: 'frage-meta' },
       th ? el('a', { class: 'zum-thema', href: '#/lernen/' + th.id, text: th.titel }) : null,
       f.korr ? el('span', { class: 'korr-tag', text: '✎ korrigiert' }) : null));
@@ -310,7 +315,7 @@ function vKarte() {
   } } });
   var karte = el('div', { class: 'karte' },
     el('div', { class: 'k-meta' }, el('span', { text: done + ' von ' + Q.n + ' geschafft' }), th ? el('span', { text: th.titel }) : null),
-    el('div', { class: 'k-frage' }, rich(f.f)), ant);
+    el('div', { class: 'k-frage' }, rich(f.f)), abbildung(f), ant);
   shell('abfragen', 'karte', [
     el('div', { class: 'fortschritt' }, el('div', { style: 'width:' + (done / Q.n * 100).toFixed(1) + '%' })),
     karte, zeigen, knoepfe,
@@ -350,7 +355,7 @@ function index() {
   INDEX = [];
   D.themen.forEach(function (t) { var txt = t.titel + ' · ' + textVon(t.lern); INDEX.push({ art: 'Lernseite', titel: t.titel, href: '#/lernen/' + t.id, txt: txt, n: normMap(txt) }); });
   D.fragensets.forEach(function (s) { s.fragen.forEach(function (f) {
-    var txt = f.f + ' · ' + textVon(f.a); INDEX.push({ art: s.titel + ', Frage ' + f.nr, titel: f.f.replace(/\*\*/g, ''), href: '#/fragen/' + s.id + '/' + f.id, txt: txt, n: normMap(txt) });
+    var txt = f.f + ' · ' + textVon(f.abb || []) + ' · ' + textVon(f.a); INDEX.push({ art: s.titel + ', Frage ' + f.nr, titel: f.f.replace(/\*\*/g, ''), href: '#/fragen/' + s.id + '/' + f.id, txt: txt, n: normMap(txt) });
   }); });
   return INDEX;
 }

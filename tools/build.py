@@ -13,7 +13,7 @@ ABSCHNITT = {'h', 'li', 'tb', 'tc', 'fl', 'br', 'ly', 'm', 'q'}
 INHALT_KEYS = ABSCHNITT - {'h', 'q'}
 THEMA_KEYS = {'id', 'titel', 'bereich', 'razzia', 'lern', 'kurz'}
 SET_KEYS = {'id', 'titel', 'razzia', 'fragen', 'kurz'}
-FRAGE_KEYS = {'id', 'thema', 'f', 'a', 'q', 'korr'}
+FRAGE_KEYS = {'id', 'nr', 'thema', 'f', 'abb', 'a', 'q', 'korr'}
 
 
 class InhaltFehler(Exception):
@@ -169,6 +169,10 @@ def validate(d):
             if f.get('thema') not in themen:
                 err.append(f'{fw}: Thema {f.get("thema")!r} gibt es nicht')
             _abschnitte(f.get('a'), quellen, fw, err)
+            if 'abb' in f:
+                _abschnitte(f['abb'], quellen, fw + ' Abbildung', err)
+            if 'nr' in f and not _text(f['nr']):
+                err.append(f'{fw}: nr muss ein Text sein')
             if not f.get('q'):
                 err.append(f'{fw}: keine Quelle')
             else:

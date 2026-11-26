@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+  <!-- Röhrchen nach dem Zentrifugieren: Plasma 55 %, dünne Schicht Leukos/Thrombos, Erythrozyten 45 % -->
+  <rect x="40" y="40" width="60" height="124" class="gelb w0"/>
+  <rect x="40" y="164" width="60" height="7" class="bg-v"/>
+  <path d="M40 171V240A30 30 0 0 0 100 240V171Z" class="rot-v"/>
+  <path d="M40 20V240A30 30 0 0 0 100 240V20" class="w2"/>
+  <line x1="32" y1="20" x2="108" y2="20" class="w2"/>
+  <line x1="40" y1="164" x2="100" y2="164" class="w1"/>
+  <line x1="40" y1="171" x2="100" y2="171" class="w1"/>
+  <!-- Beschriftung rechts -->
+  <line x1="104" y1="100" x2="126" y2="100" class="w1"/>
+  <text x="132" y="96" class="f">Blutplasma ≈ 55 %</text>
+  <text x="132" y="113" class="k">Wasser 90 %, Proteine 8 %,</text>
+  <text x="132" y="129" class="k">Salze, Nährstoffe u. a. 2 %</text>
+  <line x1="104" y1="167" x2="126" y2="167" class="w1"/>
+  <text x="132" y="163" class="f">Leukozyten + Thrombozyten</text>
+  <text x="132" y="180" class="k">zusammen unter 1 %</text>
+  <line x1="104" y1="225" x2="126" y2="225" class="w1"/>
+  <text x="132" y="221" class="f">Erythrozyten ≈ 45 %</text>
+  <text x="132" y="238" class="k">rote Blutkörperchen</text>
+  <!-- Hämatokrit-Klammer links -->
+  <path d="M30 164H22V270H30" class="rot-s"/>
+  <text x="12" y="217" text-anchor="middle" transform="rotate(-90 12 217)" class="rot-t f">Hämatokrit</text>
+</svg>

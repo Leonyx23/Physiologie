@@ -11,7 +11,7 @@ THEMA = dict(
             ['Wärme', 'Plasma als Wärmespeicher'],
             ['Flüssigkeitshaushalt', 'Plasmaproteine, Elektrolyte'],
         ], q=[('BL', 1)]),
-        dict(h='Zusammensetzung', li=['**Blutvolumen:** ca. **70 ml/kg** Körpergewicht = 4,5–6 l'],
+        dict(h='Zusammensetzung', bild=dict(n='blut-roehrchen', u='Blut im Röhrchen nach dem Zentrifugieren: Die schweren Zellen sinken nach unten. Der Anteil der Zellen am Gesamtvolumen ist der **Hämatokrit**.'), li=['**Blutvolumen:** ca. **70 ml/kg** Körpergewicht = 4,5–6 l'],
              ly=dict(s=[['Blutplasma (55 %)', 'Wasser 90 %, Plasmaproteine 8 % (Albumin 60 %, Globuline 40 %), Elektrolyte, Hormone, Nährstoffe 2 %'],
                         ['Blutzellen (45 %)', 'Erythrozyten 99 %, Leukozyten und Thrombozyten je unter 1 %']]),
              m=['**Hämatokrit** = Anteil der Blutzellen am Gesamtvolumen, normal ca. **42 %**',

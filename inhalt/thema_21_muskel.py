@@ -2,7 +2,7 @@ THEMA = dict(
     id='muskel', titel='Muskel: Aufbau, Kontraktion und Kraft', bereich='Muskel', razzia=2,
     kurz='Sarkomer, Querbrückenzyklus, Fasertypen, motorische Einheit, Kraft-Längen- und Kraft-Geschwindigkeits-Relation',
     lern=[
-        dict(h='Das Sarkomer', li=[
+        dict(h='Das Sarkomer', bild=dict(n='sarkomer', u='Sarkomer im Längsschnitt: Aktin hängt an den Z-Streifen, Myosin liegt in der Mitte (A-Streifen). In der **H-Zone** gibt es nur Myosin, im **I-Streifen** nur Aktin. Bei der Kontraktion gleitet Aktin zur Mitte – H-Zone und I-Streifen werden schmaler, der A-Streifen bleibt gleich lang.'), li=[
             'Unter dem Mikroskop zeigt der Skelettmuskel die **Querstreifung**: dunkle **A-Streifen** (anisotrop), helle **I-Streifen** (isotrop), darin schmale **Z-Streifen**',
             '**Sarkomer** = Abschnitt zwischen zwei Z-Streifen, Länge ca. **2–2,5 µm**, Durchmesser ca. 1 µm; bei einer Kontraktion verkürzt es sich um ca. **0,4 µm**',
             'Die Z-Scheiben sind der Ausgangspunkt für alle anderen Filamente',

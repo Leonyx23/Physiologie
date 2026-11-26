@@ -34,7 +34,7 @@ THEMA = dict(
                ['höher', 'Schwindel, Kopfschmerz, Verwirrtheit, Krampfanfälle, Bewusstlosigkeit'], ['über 50 %', 'akute Lebensgefahr']],
              m='Niemals einen Kohlegrill in geschlossenen Räumen betreiben – CO riecht man nicht. Bei Hausbränden sterben die meisten an CO, nicht an der Hitze.',
              q=[('AG', '5–6')]),
-        dict(h='Die Sauerstoffbindungskurve', li=[
+        dict(h='Die Sauerstoffbindungskurve', bild=dict(n='o2-bindungskurve', u='S-förmige O₂-Bindungskurve (schwarz) mit **Rechtsverschiebung** (rot, z. B. Azidose, CO₂↑, Wärme, 2,3-DPG↑) und **Linksverschiebung** (blau). P50 = pO₂ bei 50 % Sättigung.'), li=[
             '**Sauerstoffsättigung (SpO₂)** = Anteil der Hb-Moleküle (in %), die O₂ tragen',
             'Trägt man SpO₂ gegen pO₂ auf, entsteht eine **S-förmige (sigmoidale)** Kurve',
             '**Positive Kooperativität:** jedes gebundene O₂ verändert die Form des Hb und erleichtert die Bindung des nächsten',

@@ -14,7 +14,7 @@ THEMA = dict(
             ['Regulation', 'Säure-Basen-Haushalt, Wasser- und Elektrolythaushalt, Blutdruck (langfristig: Blutvolumen, Angiotensin II), Calciumhaushalt, Gluconeogenese'],
             ['Hormone', '**Renin** (Blutdruck), **Erythropoietin** (Blutbildung), aktives **Vitamin D₃** (Calcium)'],
         ], q=[('EX5', '1–2')]),
-        dict(h='Das Nephron', li=[
+        dict(h='Das Nephron', bild=dict(n='nephron', u='Ein Nephron schematisch: Filtration im Glomerulus (Rinde), dann proximaler Tubulus, Henle-Schleife (taucht ins Mark), distaler Tubulus und Sammelrohr.'), li=[
             'Kleinste Funktionseinheit; ca. **1 Mio. Nephrone** pro Niere – mit 80 Jahren nur noch etwa ⅓. Deshalb sind Ältere anfälliger für Nierenversagen bei Flüssigkeitsmangel, und Medikamente müssen niedriger dosiert werden',
         ], fl=dict(s=[['Glomerulus', 'Gefäßknäuel in der Bowman-Kapsel: Filtration'], ['Proximaler Tubulus', '60 % der Rückresorption, Sekretion'],
                       ['Henle-Schleife', 'Gegenstromprinzip'], ['Distaler Tubulus', 'Ca²⁺ (Parathormon), Na⁺ (RAAS)'], ['Sammelrohr', 'Wasser (ADH)']]),

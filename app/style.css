@@ -179,11 +179,12 @@ mark{background:color-mix(in srgb,var(--merke-l) 40%,transparent);color:inherit;
 @media print{.top{position:static}.frage .antwort{display:block}}
 
 /* Schaubilder (inhalt/bilder/*.svg) */
-.bild{margin:10px auto 4px;max-width:540px}
+.bild{margin:10px auto 4px;max-width:460px}
+@media (max-width:560px){.bild{margin:10px -8px 4px}}
 .bild svg{display:block;width:100%;height:auto;color:var(--ink);font-family:var(--sans);overflow:visible}
 .bild figcaption{text-align:center}
 .bild path,.bild rect,.bild circle,.bild ellipse,.bild line,.bild polyline,.bild polygon{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}
-.bild text{fill:currentColor;stroke:none;font-size:14px}
+.bild text{fill:currentColor;stroke:none;font-size:15px}
 .bild tspan{font-size:inherit}
 .bild .rot{fill:var(--rot-h);stroke:var(--rot)} .bild .rot-v{fill:var(--rot);stroke:none} .bild .rot-s{fill:none;stroke:var(--rot);stroke-width:2} .bild .rot-t{fill:var(--rot)}
 .bild .blau{fill:var(--blau-h);stroke:var(--blau)} .bild .blau-v{fill:var(--blau);stroke:none} .bild .blau-s{fill:none;stroke:var(--blau);stroke-width:2} .bild .blau-t{fill:var(--blau)}
@@ -193,6 +194,6 @@ mark{background:color-mix(in srgb,var(--merke-l) 40%,transparent);color:inherit;
 .bild .grau{fill:var(--grau-h);stroke:var(--grau)} .bild .grau-v{fill:var(--grau);stroke:none} .bild .grau-s{fill:none;stroke:var(--grau);stroke-width:2} .bild .grau-t{fill:var(--grau)}
 .bild .akz{fill:var(--soft);stroke:var(--accent)} .bild .akz-v{fill:var(--accent);stroke:none} .bild .akz-s{fill:none;stroke:var(--accent);stroke-width:2} .bild .akz-t{fill:var(--accent)}
 .bild .ink-v{fill:currentColor;stroke:none} .bild .bg-v{fill:var(--surface);stroke:none}
-.bild .k{font-size:12px;fill:var(--muted)} .bild .f{font-weight:700} .bild .g{font-size:16px;font-weight:700} .bild .i{font-style:italic}
+.bild .k{font-size:13px;fill:var(--muted)} .bild .f{font-weight:700} .bild .g{font-size:17px;font-weight:700} .bild .i{font-style:italic}
 .bild .halo{paint-order:stroke;stroke:var(--surface);stroke-width:4px;stroke-linejoin:round}
 .bild .w1{stroke-width:1} .bild .w2{stroke-width:2.5} .bild .w3{stroke-width:4} .bild .w0{stroke:none} .bild .d{stroke-dasharray:5 4} .bild .nf{fill:none}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400">
+  <!-- Rinde / Mark -->
+  <rect x="0" y="0" width="360" height="150" class="grau w0"/>
+  <line x1="0" y1="150" x2="360" y2="150" class="d w1"/>
+  <text x="8" y="142" class="k">Rinde</text>
+  <text x="8" y="168" class="k">Mark</text>
+
+  <!-- Gefäße am Gefäßpol -->
+  <path d="M4 68C24 70 40 74 54 78" class="rot-s w3"/>
+  <path d="M54 88C40 94 24 100 4 104" class="rot-s w2"/>
+  <text x="6" y="50" class="rot-t k">Vas afferens</text>
+  <text x="6" y="122" class="rot-t k">Vas efferens</text>
+
+  <!-- Bowman-Kapsel mit Glomerulus -->
+  <circle cx="84" cy="82" r="31" class="akz"/>
+  <circle cx="76" cy="72" r="9" class="rot"/>
+  <circle cx="95" cy="74" r="9" class="rot"/>
+  <circle cx="70" cy="90" r="9" class="rot"/>
+  <circle cx="89" cy="93" r="9" class="rot"/>
+  <circle cx="103" cy="88" r="7" class="rot"/>
+  <text x="84" y="31" text-anchor="middle" class="f">Glomerulus</text>
+  <text x="84" y="15" text-anchor="middle" class="k">Bowman-Kapsel +</text>
+
+  <!-- proximaler Tubulus (gewunden in der Rinde) -->
+  <path d="M114 86C132 70 150 112 160 92S188 58 178 102L176 150" class="gruen-s w3"/>
+  <!-- Henle-Schleife -->
+  <path d="M176 150V316C176 338 212 338 212 316V150" class="blau-s w3"/>
+  <!-- distaler Tubulus -->
+  <path d="M212 150C214 128 236 126 226 106S236 74 262 70C282 66 300 64 318 60" class="lila-s w3"/>
+  <!-- Sammelrohr -->
+  <path d="M318 14V380" class="gelb-s w3"/>
+  <path d="M311 368L318 382L325 368" class="gelb-s w2"/>
+
+  <!-- Beschriftung -->
+  <line x1="150" y1="114" x2="140" y2="182" class="gruen-s w1"/>
+  <text x="166" y="198" text-anchor="end" class="gruen-t f">proximaler</text>
+  <text x="166" y="214" text-anchor="end" class="gruen-t f">Tubulus</text>
+  <text x="166" y="230" text-anchor="end" class="k">60 % Rückresorption</text>
+
+  <text x="166" y="288" text-anchor="end" class="blau-t f">Henle-Schleife</text>
+  <text x="166" y="304" text-anchor="end" class="k">Gegenstromprinzip</text>
+
+  <text x="250" y="38" text-anchor="middle" class="lila-t f">distaler Tubulus</text>
+  <text x="250" y="55" text-anchor="middle" class="k">Na⁺, Ca²⁺</text>
+
+  <text x="306" y="250" text-anchor="end" class="gelb-t f">Sammelrohr</text>
+  <text x="306" y="266" text-anchor="end" class="k">Wasser (ADH)</text>
+  <text x="306" y="394" text-anchor="end" class="k">zum Nierenbecken</text>
+</svg>

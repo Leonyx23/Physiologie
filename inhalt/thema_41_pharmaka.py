@@ -2,7 +2,7 @@ THEMA = dict(
     id='vns-medikamente', titel='Medikamente am vegetativen Nervensystem', bereich='Vegetatives Nervensystem',
     kurz='Adrenalin, Betablocker, β₂-Mimetika, Cholinesterasehemmer, Atropin, Kampfstoffe – und Fallbeispiele',
     lern=[
-        dict(h='Medikamente an den Adrenozeptoren', tb=[
+        dict(h='Medikamente an den Adrenozeptoren', bild=dict(n='agonist-antagonist', u='Prinzip der Medikamente am vegetativen Nervensystem: **Agonisten** lösen am Rezeptor dasselbe Signal aus wie der Transmitter, **Antagonisten** (Blocker) besetzen ihn, ohne ein Signal auszulösen.'), tb=[
             ['Wirkstoff', 'Mechanismus', 'Einsatz'],
             ['Adrenalin', 'β₂ > β₁ > α₁', 'Reanimation, anaphylaktischer Schock'],
             ['Noradrenalin', 'α₁ > β₁ > β₂', 'septischer Schock'],

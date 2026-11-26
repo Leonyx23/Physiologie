@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0L10 5L0 10z" class="ink-v"/></marker></defs>
+<rect x="8" y="28" width="46" height="240" rx="10" class="grau"/>
+<text x="31" y="20" text-anchor="middle" class="s f">ZNS</text>
+<text x="64" y="48" class="s f rot-t">Sympathikus</text>
+<text x="150" y="48" class="k">Seitenhorn Th1–L2</text>
+<circle cx="40" cy="70" r="7" class="rot-v"/>
+<line x1="47" y1="70" x2="110" y2="70" class="rot-s w2"/>
+<path d="M104 64L110 70L104 76" class="rot-s w2"/>
+<ellipse cx="122" cy="70" rx="12" ry="9" class="rot"/>
+<circle cx="122" cy="70" r="4" class="rot-v"/>
+<line x1="126" y1="70" x2="292" y2="70" class="rot-s w2"/>
+<path d="M286 64L292 70L286 76" class="rot-s w2"/>
+<rect x="300" y="55" width="54" height="30" rx="8" class="gelb"/>
+<text x="327" y="75" text-anchor="middle" class="s">Organ</text>
+<text x="122" y="96" text-anchor="middle" class="s">ACh (N)</text>
+<text x="122" y="111" text-anchor="middle" class="k">Grenzstrang</text>
+<text x="292" y="100" text-anchor="end" class="s">Noradrenalin</text>
+<text x="78" y="64" text-anchor="middle" class="k">kurz</text>
+<text x="210" y="64" text-anchor="middle" class="k">lang</text>
+<text x="64" y="142" class="s f blau-t">Parasympathikus</text>
+<text x="180" y="142" class="k">Hirnstamm, S2–S4</text>
+<circle cx="40" cy="164" r="7" class="blau-v"/>
+<line x1="47" y1="164" x2="228" y2="164" class="blau-s w2"/>
+<path d="M222 158L228 164L222 170" class="blau-s w2"/>
+<ellipse cx="240" cy="164" rx="12" ry="9" class="blau"/>
+<circle cx="240" cy="164" r="4" class="blau-v"/>
+<line x1="244" y1="164" x2="292" y2="164" class="blau-s w2"/>
+<path d="M286 158L292 164L286 170" class="blau-s w2"/>
+<rect x="300" y="149" width="54" height="30" rx="8" class="gelb"/>
+<text x="327" y="169" text-anchor="middle" class="s">Organ</text>
+<text x="240" y="190" text-anchor="middle" class="s">ACh (N)</text>
+<text x="240" y="205" text-anchor="middle" class="k">nahe am Organ</text>
+<text x="327" y="194" text-anchor="middle" class="s">ACh (M)</text>
+<text x="140" y="158" text-anchor="middle" class="k">lang</text>
+<text x="270" y="158" text-anchor="middle" class="k">kurz</text>
+<text x="64" y="228" class="s f">Willkürmotorik</text>
+<text x="170" y="228" class="k">nur eine Synapse</text>
+<circle cx="40" cy="250" r="7" class="ink-v"/>
+<line x1="47" y1="250" x2="292" y2="250" class="w2"/>
+<path d="M286 244L292 250L286 256" class=" w2"/>
+<rect x="300" y="235" width="54" height="30" rx="8" class="gelb"/>
+<text x="327" y="255" text-anchor="middle" class="s">Muskel</text>
+<text x="327" y="280" text-anchor="middle" class="s">ACh (N)</text>
+</svg>

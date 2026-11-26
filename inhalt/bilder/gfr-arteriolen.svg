@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 208">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0L10 5L0 10z" class="rot-v"/></marker></defs>
+<path d="M8 82H146M8 118H146" class="rot-s w2"/>
+<path d="M214 93H352M214 107H352" class="rot-s w2"/>
+<circle cx="180" cy="100" r="36" class="akz"/>
+<circle cx="168" cy="90" r="9" class="rot"/>
+<circle cx="190" cy="88" r="9" class="rot"/>
+<circle cx="172" cy="110" r="9" class="rot"/>
+<circle cx="194" cy="110" r="9" class="rot"/>
+<line x1="40" y1="100" x2="100" y2="100" class="rot-s w2" marker-end="url(#a)"/>
+<line x1="250" y1="100" x2="300" y2="100" class="rot-s w1" marker-end="url(#a)"/>
+<text x="77" y="30" text-anchor="middle" class="s f">Vas afferens weit</text>
+<text x="77" y="47" text-anchor="middle" class="k">durch PGE₂</text>
+<text x="283" y="30" text-anchor="middle" class="s f">Vas efferens eng</text>
+<text x="283" y="47" text-anchor="middle" class="k">durch Angiotensin II</text>
+<text x="180" y="56" text-anchor="middle" class="s f">Druck ↑</text>
+<line x1="180" y1="136" x2="180" y2="158" class="gelb-s w3"/>
+<path d="M173 152L180 162L187 152" class="gelb-s w3"/>
+<text x="180" y="200" text-anchor="middle" class="s f">GFR bleibt gleich</text>
+<text x="77" y="146" text-anchor="middle" class="k">NSAR</text>
+<text x="77" y="162" text-anchor="middle" class="k">verhindern das</text>
+<text x="77" y="178" text-anchor="middle" class="k">Weitstellen</text>
+<text x="283" y="146" text-anchor="middle" class="k">ACE-Hemmer, Sartane</text>
+<text x="283" y="162" text-anchor="middle" class="k">verhindern das</text>
+<text x="283" y="178" text-anchor="middle" class="k">Engstellen</text>
+</svg>

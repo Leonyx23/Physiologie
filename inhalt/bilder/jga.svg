@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 248">
+<circle cx="190" cy="166" r="56" class="akz"/>
+<circle cx="174" cy="150" r="11" class="rot"/>
+<circle cx="198" cy="146" r="11" class="rot"/>
+<circle cx="214" cy="166" r="11" class="rot"/>
+<circle cx="178" cy="176" r="11" class="rot"/>
+<circle cx="200" cy="186" r="11" class="rot"/>
+<path d="M30 40C80 60 130 90 180 112" class="rot-s w3"/>
+<path d="M200 112C240 90 290 60 340 40" class="rot-s w2"/>
+<rect x="132" y="60" width="116" height="24" rx="12" class="lila"/>
+<ellipse cx="176" cy="80" rx="3.5" ry="5" class="lila-v"/>
+<ellipse cx="186" cy="80" rx="3.5" ry="5" class="lila-v"/>
+<ellipse cx="196" cy="80" rx="3.5" ry="5" class="lila-v"/>
+<ellipse cx="206" cy="80" rx="3.5" ry="5" class="lila-v"/>
+<circle cx="150" cy="92" r="7" class="gelb"/>
+<circle cx="150" cy="92" r="2" class="gelb-v"/>
+<circle cx="162" cy="98" r="7" class="gelb"/>
+<circle cx="162" cy="98" r="2" class="gelb-v"/>
+<circle cx="138" cy="86" r="7" class="gelb"/>
+<circle cx="138" cy="86" r="2" class="gelb-v"/>
+<text x="30" y="30" class="k rot-t">Vas afferens</text>
+<text x="340" y="30" text-anchor="end" class="k rot-t">Vas efferens</text>
+<text x="190" y="48" text-anchor="middle" class="s lila-t">distaler Tubulus</text>
+<text x="10" y="140" class="s f">Polkissenzellen</text>
+<text x="10" y="156" class="k">setzen Renin frei</text>
+<line x1="122" y1="128" x2="138" y2="98" class="w1"/>
+<text x="350" y="140" text-anchor="end" class="s f">Macula densa</text>
+<text x="350" y="156" text-anchor="end" class="k">misst Na⁺</text>
+<line x1="258" y1="126" x2="208" y2="88" class="w1"/>
+<text x="190" y="240" text-anchor="middle" class="s">Glomerulus</text>
+</svg>

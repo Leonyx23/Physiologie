@@ -23,7 +23,7 @@ THEMA = dict(
             ['Harnblase', 'M. detrusor erschlafft (Harn halten)', 'M. detrusor kontrahiert (Harn lassen)'],
             ['Stoffwechsel', 'Glykogenolyse, weniger Insulin, Na⁺/K⁺-ATPase ↑ → Hypokaliämie', 'Insulinfreisetzung'],
         ], q=[('HK', 21), ('HK', '32–33'), ('HK', '36–37')]),
-        dict(h='Aufbau: zwei Neurone', tb=[
+        dict(h='Aufbau: zwei Neurone', bild=dict(n='vns-aufbau', u='Zwei Neurone hintereinander: Beim **Sympathikus** liegt das Ganglion nah am Rückenmark (kurz → lang), beim **Parasympathikus** nah am Organ (lang → kurz). Die Willkürmotorik kommt mit einer Synapse aus. N = Nikotin-, M = Muskarinrezeptor.'), tb=[
             ['', 'Sympathikus', 'Parasympathikus'],
             ['1. Neuron', 'Seitenhorn des Rückenmarks **Th1–L2**', '„drum herum“ (para = daneben): **Hirnstamm** und sakrales Rückenmark **S2–S4**'],
             ['Umschaltung (Ganglion)', 'nahe am ZNS: **Grenzstrang** (paravertebral) oder vor der Wirbelsäule (prävertebral: Ganglion coeliacum, mesentericum)', 'nahe am oder **im Erfolgsorgan**'],
@@ -64,7 +64,7 @@ THEMA = dict(
                  '**Depolarisation:** Innenseite wird weniger negativ (Einstrom positiver Ionen) · **Hyperpolarisation:** stärker negativ (Ausstrom positiver oder Einstrom negativer Ionen)',
                  'Die **Na⁺/K⁺-ATPase** pumpt unter ATP-Verbrauch 3 Na⁺ hinaus und 2 K⁺ hinein → Innenseite negativ (**Ruhemembranpotenzial**)'],
              q=[('HK', '28–29')]),
-        dict(h='Das Auge', tb=[
+        dict(h='Das Auge', bild=dict(n='auge-pupille', u='Pupille: Der Parasympathikus zieht den Ringmuskel zusammen (**Miosis**), der Sympathikus den strahlenförmigen Muskel (**Mydriasis**).'), tb=[
             ['', 'Parasympathikus (M₃)', 'Sympathikus (α₁)'],
             ['Pupille', 'M. sphincter pupillae (ringförmig) kontrahiert → **Miosis**', 'M. dilatator pupillae (längs) kontrahiert → **Mydriasis**'],
             ['Linse', 'M. ciliaris kontrahiert → Zonulafasern locker → Linse rund → **Nahakkommodation**', 'M. ciliaris erschlafft → Zonulafasern gespannt → Linse flach → **Fernakkommodation**'],

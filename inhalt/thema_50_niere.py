@@ -2,7 +2,7 @@ THEMA = dict(
     id='niere', titel='Aufbau und Funktion der Niere', bereich='Niere und Wasserhaushalt',
     kurz='Lage, Aufgaben, Nephron, glomeruläre Filtration, Tubulus, Gegenstromprinzip, Diuretika',
     lern=[
-        dict(h='Lage und Aufbau', li=[
+        dict(h='Lage und Aufbau', bild=dict(n='niere-schnitt', u='Niere im Längsschnitt: außen die **Rinde**, darunter das **Mark** mit den Pyramiden. Der Harn fließt über die Nierenkelche ins Nierenbecken und in den Harnleiter.'), li=[
             'Zwei Nieren, je ca. **12 × 5 × 4 cm**, im **Retroperitoneum** neben der Wirbelsäule (BWK 12), direkt unter dem Zwerchfell',
             'Die rechte Niere liegt etwas tiefer; ihr unterer Pol auf Höhe des Bauchnabels',
             'Auf den oberen Polen sitzen die **Nebennieren** – sie gehören nicht zur Niere und haben eigene Aufgaben',
@@ -20,7 +20,7 @@ THEMA = dict(
                       ['Henle-Schleife', 'Gegenstromprinzip'], ['Distaler Tubulus', 'Ca²⁺ (Parathormon), Na⁺ (RAAS)'], ['Sammelrohr', 'Wasser (ADH)']]),
              m='**Zwei Kapillarsysteme hintereinander:** Die Arteriole bildet erst den Glomerulus und verlässt ihn wieder **als Arteriole** (nur Filtration, kein Stoffaustausch). Erst danach versorgt sie das Kapillarnetz entlang der Tubuli, das Energie für Resorption und Sekretion liefert.',
              q=[('EX5', '2–3'), ('EX5', 5)]),
-        dict(h='Glomeruläre Filtration', li=[
+        dict(h='Glomeruläre Filtration', bild=dict(n='filtrationsdruck', u='Druckbilanz am Glomerulus: Der Blutdruck drückt nach außen (55 mmHg), kolloidosmotischer Druck und Bowman-Kapsel halten dagegen – übrig bleiben etwa **10 mmHg** für die Filtration.'), li=[
             'Durch die Nieren fließen ca. **1500 l Blut pro Tag** – etwa 20 % des HZV bzw. das 300-Fache des Blutvolumens (im Skript steht „300-mal das HZV“)',
             'Daraus filtrieren die Glomeruli **180 l Primärharn** pro Tag = **GFR 120 ml/min**',
             'Filtration ist passiv (Druck); Resorption und Sekretion im Tubulus sind **aktiv** und verbrauchen Energie',
@@ -46,7 +46,7 @@ THEMA = dict(
                '**SGLT2** holt Glukose mit Na⁺ zurück. **Gliflozine** („-flozin“) blockieren ihn → mehr Zucker im Urin, niedrigerer Blutzucker; auch Standard bei Herzinsuffizienz',
                '**Sekretion:** OAT1 (organische Anionen), OCT2 (organische Kationen) – so werden Medikamente und Schadstoffe ausgeschieden, die den Filter nicht passieren'],
              q=[('EX5', '5–6')]),
-        dict(h='Das Gegenstromprinzip', fl=dict(s=[
+        dict(h='Das Gegenstromprinzip', bild=dict(n='gegenstrom', u='Gegenstromprinzip: Der aufsteigende Ast pumpt Salz ins Mark (NKCC2), der absteigende gibt Wasser ab. So wird das Mark nach innen immer salziger (**400 → 1200 mosmol/l**).'), fl=dict(s=[
             ['Aufsteigender Ast', 'NKCC2 pumpt Na⁺, K⁺, 2 Cl⁻ ins Gewebe; für Wasser **undurchlässig**'],
             ['Nierenmark wird salzig', 'Osmolarität steigt von der Rinde zum Mark: 400 → 1200 mosmol/l'],
             ['Absteigender Ast', 'sehr **wasserdurchlässig** → Wasser folgt dem osmotischen Sog ins Gewebe'],

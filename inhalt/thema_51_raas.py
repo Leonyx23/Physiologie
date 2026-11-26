@@ -2,7 +2,7 @@ THEMA = dict(
     id='raas', titel='RAAS, ADH und Calciumhaushalt', bereich='Niere und Wasserhaushalt',
     kurz='Renin-Angiotensin-Aldosteron-System, ACE-Hemmer und Sartane, ADH und Aquaporine, Parathormon und Vitamin D',
     lern=[
-        dict(h='Renin-Angiotensin-Aldosteron-System', li=[
+        dict(h='Renin-Angiotensin-Aldosteron-System', bild=dict(n='raas', u='RAAS als Kaskade: Renin aus der Niere und ACE aus der Lunge machen aus Angiotensinogen (Leber) das **Angiotensin II**. Seine Wirkungen heben den Blutdruck.'), li=[
             'Langfristige Blutdruckregulation über **Plasmavolumen** (Wasser, Natrium) und den Vasokonstriktor **Angiotensin II**',
             'Eine Kaskade von Plasmafaktoren – ähnlich wie die Gerinnung',
         ], fl=dict(s=[['Blutdruck oder Na⁺ im Urin sinkt', 'Sympathikus ↑ (β₁)'], ['Polkissenzellen setzen **Renin** frei'],
@@ -10,7 +10,7 @@ THEMA = dict(
                       ['ACE → **Angiotensin II**', 'ACE aus dem Lungenendothel'],
                       ['Wirkungen', 'Gefäße eng, Aldosteron, ADH, Durst → Blutdruck steigt']]),
              q=[('EX5', '9–11')]),
-        dict(h='Der juxtaglomeruläre Apparat', tb=[
+        dict(h='Der juxtaglomeruläre Apparat', bild=dict(n='jga', u='Juxtaglomerulärer Apparat am Gefäßpol: Die **Macula densa** misst Na⁺ im distalen Tubulus, die **Polkissenzellen** in der Wand der zuführenden Arteriole setzen Renin frei.'), tb=[
             ['Zellen', 'Wo', 'Aufgabe'],
             ['Macula densa', 'Epithel des distalen Tubulus neben dem Glomerulus', 'misst die Na⁺-Konzentration im Tubulus'],
             ['Extraglomeruläre Mesangiumzellen', 'neben der zuführenden Arteriole', 'Barorezeptoren für den Druck in der Arteriole'],
@@ -31,14 +31,14 @@ THEMA = dict(
             ['Angiotensin-II-Rezeptorblocker', '„-sartan“', 'blockieren den AT₁-Rezeptor'],
             ['Aldosteronantagonisten', 'Spironolacton, Eplerenon', 'schwach harntreibend, aber **Kalium steigt**; bei Aszites (mit Schleifendiuretika) und Herzinsuffizienz (bremsen den bindegewebigen Umbau)'],
         ], q=[('EX5', '10, 13')]),
-        dict(h='Wie die Niere ihre Filtration konstant hält', tb=[
+        dict(h='Wie die Niere ihre Filtration konstant hält', bild=dict(n='gfr-arteriolen', u='Fällt der Blutdruck, wird die zuführende Arteriole weit (PGE₂) und die abführende eng (Angiotensin II) – der Druck im Glomerulus und damit die GFR bleiben gleich.'), tb=[
             ['Situation', 'Was passiert', 'GFR'],
             ['Normal', '–', 'normal'],
             ['Blutdruck fällt', 'PGE₂ weitet die zuführende Arteriole, Angiotensin II verengt die abführende', 'bleibt gleich'],
             ['+ NSAR', 'keine PGE₂-Erweiterung der zuführenden Arteriole', 'fällt'],
             ['+ ACE-Hemmer oder Sartan', 'keine Angiotensin-II-Verengung der abführenden Arteriole', 'fällt'],
         ], m='GFR steigt bei **Weitstellung der zuführenden** und **Engstellung der abführenden** Arteriole.', q=[('EX5', '11–12')]),
-        dict(h='ADH und die Kontrolle der Osmolarität', fl=dict(s=[
+        dict(h='ADH und die Kontrolle der Osmolarität', bild=dict(n='adh-aquaporin', u='ADH bindet an der Blutseite der Sammelrohrzelle. Daraufhin werden **Aquaporin-2**-Kanäle auf der Harnseite eingebaut, und Wasser fließt ins salzige Mark zurück.'), fl=dict(s=[
             ['Osmolarität im Plasma steigt', 'meist Wassermangel'], ['Osmorezeptoren im Hypothalamus', 'Durst und Salzappetit'],
             ['ADH wird gebildet', 'im Hypothalamus, über Axone in den Hypophysenhinterlappen, dort ins Blut'],
             ['ADH bindet am Sammelrohr', 'Vasopressin-Rezeptor → Vesikel mit **Aquaporin-2**'],
@@ -49,7 +49,7 @@ THEMA = dict(
                  ['Kein ADH (Diabetes insipidus)', 'Kopfverletzung, Hirn-OP, Entzündung, Tumor', 'viel Urin, großer Durst, Na⁺ steigt; Therapie: Desmopressin-Nasenspray'],
                  ['Zu viel ADH (SIADH)', 'Schlaganfall, Schädel-Hirn-Trauma, Meningitis, Pneumonie, Tumoren', 'wenig, sehr konzentrierter Urin; **Hyponatriämie**']],
              q=[('EX5', '13–14')]),
-        dict(h='Calciumhaushalt', li=[
+        dict(h='Calciumhaushalt', bild=dict(n='calcium', u='Calciumhaushalt: **PTH** holt Ca²⁺ aus dem Knochen, **Vitamin D₃** aus dem Darm. Zusammen lassen sie die Niere mehr Ca²⁺ zurückholen. Calcitonin wirkt dagegen, spielt aber kaum eine Rolle.'), li=[
             '**99 %** des Calciums steckt als Calciumphosphat in Knochen und Zähnen; nur 0,01 % liegt in den Zellen (v. a. im Retikulum)',
             'Freies Ca²⁺ braucht man für Querbrückenzyklus, Aktionspotenzial, Gerinnung (Faktor IV), Zellteilung',
             'Aufnahme im Darm, Einbau in den Knochen, Ausscheidung über die Niere',

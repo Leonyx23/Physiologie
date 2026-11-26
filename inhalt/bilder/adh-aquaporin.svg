@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 230">
+<defs><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0L10 5L0 10z" class="blau-v"/></marker><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0L10 5L0 10z" class="ink-v"/></marker></defs>
+<rect x="0" y="40" width="104" height="160" class="gelb w0"/>
+<rect x="256" y="40" width="104" height="160" class="rot w0"/>
+<rect x="104" y="40" width="152" height="160" class="grau"/>
+<circle cx="226" cy="182" r="12" class="lila"/>
+<rect x="98" y="61" width="12" height="18" rx="3" class="blau"/>
+<rect x="98" y="103" width="12" height="18" rx="3" class="blau"/>
+<rect x="98" y="141" width="12" height="18" rx="3" class="blau"/>
+<circle cx="150" cy="92" r="9" class="bg-v"/>
+<circle cx="150" cy="92" r="9" class="w1"/>
+<rect x="147" y="87" width="6" height="10" rx="2" class="blau-v"/>
+<circle cx="176" cy="120" r="9" class="bg-v"/>
+<circle cx="176" cy="120" r="9" class="w1"/>
+<rect x="173" y="115" width="6" height="10" rx="2" class="blau-v"/>
+<circle cx="162" cy="70" r="9" class="bg-v"/>
+<circle cx="162" cy="70" r="9" class="w1"/>
+<rect x="159" y="65" width="6" height="10" rx="2" class="blau-v"/>
+<path d="M250 124H262M250 108H262M250 108V124" class="lila-s w2"/>
+<path d="M300 110L308 116L300 122L292 116Z" class="lila-v"/>
+<line x1="244" y1="116" x2="194" y2="104" class="w1" marker-end="url(#a)"/>
+<line x1="20" y1="70" x2="340" y2="70" class="blau-s w2" marker-end="url(#b)"/>
+<line x1="20" y1="150" x2="340" y2="150" class="blau-s w2" marker-end="url(#b)"/>
+<text x="52" y="24" text-anchor="middle" class="s f">Harn</text>
+<text x="52" y="220" text-anchor="middle" class="k">im Sammelrohr</text>
+<text x="180" y="24" text-anchor="middle" class="s f">Zelle</text>
+<text x="308" y="24" text-anchor="middle" class="s f">Blut</text>
+<text x="308" y="220" text-anchor="middle" class="k">salziges Mark</text>
+<text x="308" y="140" text-anchor="middle" class="s f lila-t">ADH</text>
+<text x="30" y="64" class="s blau-t">H₂O</text>
+<text x="30" y="144" class="s blau-t">H₂O</text>
+<text x="180" y="222" text-anchor="middle" class="s blau-t">Aquaporin-2</text>
+</svg>

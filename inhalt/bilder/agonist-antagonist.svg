@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 202">
+<rect x="8" y="120" width="104" height="16" class="grau w0"/>
+<line x1="8" y1="120" x2="112" y2="120" class="w1"/>
+<path d="M38 136V108H50V120C50 128 70 128 70 120V108H82V136" class="lila"/>
+<rect x="128" y="120" width="104" height="16" class="grau w0"/>
+<line x1="128" y1="120" x2="232" y2="120" class="w1"/>
+<path d="M158 136V108H170V120C170 128 190 128 190 120V108H202V136" class="lila"/>
+<rect x="248" y="120" width="104" height="16" class="grau w0"/>
+<line x1="248" y1="120" x2="352" y2="120" class="w1"/>
+<path d="M278 136V108H290V120C290 128 310 128 310 120V108H322V136" class="lila"/>
+<path d="M50 114C50 102 70 102 70 114V120H50Z" class="akz"/>
+<line x1="60" y1="140" x2="60" y2="166" class="gruen-s w3"/>
+<path d="M52 160L60 170L68 160" class="gruen-s w3"/>
+<path d="M170 112C170 98 190 98 190 112V120H170Z" class="gruen"/>
+<line x1="180" y1="140" x2="180" y2="166" class="gruen-s w3"/>
+<path d="M172 160L180 170L188 160" class="gruen-s w3"/>
+<rect x="286" y="100" width="28" height="22" rx="4" class="rot"/>
+<path d="M328 96C328 84 348 84 348 96V102H328Z" class="akz"/>
+<path d="M290 154L310 174M310 154L290 174" class="rot-s w3"/>
+<text x="60" y="24" text-anchor="middle" class="f">Transmitter</text>
+<text x="60" y="41" text-anchor="middle" class="k">z. B. NA, ACh</text>
+<text x="180" y="24" text-anchor="middle" class="f">Agonist</text>
+<text x="180" y="41" text-anchor="middle" class="k">z. B. Salbutamol</text>
+<text x="300" y="24" text-anchor="middle" class="f">Antagonist</text>
+<text x="300" y="41" text-anchor="middle" class="k">z. B. Betablocker,</text>
+<text x="300" y="57" text-anchor="middle" class="k">Atropin</text>
+<text x="60" y="194" text-anchor="middle" class="s gruen-t">Signal</text>
+<text x="180" y="194" text-anchor="middle" class="s gruen-t">Signal wie echt</text>
+<text x="300" y="194" text-anchor="middle" class="s rot-t">kein Signal</text>
+<text x="8" y="148" class="k">Zelle</text>
+</svg>

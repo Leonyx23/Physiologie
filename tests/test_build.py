@@ -1,4 +1,5 @@
 import copy, json, re, sys
+import pytest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -133,3 +134,65 @@ def test_build_refuses_invalid(tmp_path):
         assert 'Quelle' in str(e)
     else:
         raise AssertionError('ungültige Inhalte wurden gebaut')
+
+
+# ---------- Bilder ----------
+PROBE = (FIX / 'bilder' / 'probe.svg').read_text(encoding='utf-8')
+
+
+def mit_bild(svg):
+    d = data()
+    d['bilder']['probe'] = svg
+    return build.validate(d)
+
+
+def test_bilder_geladen():
+    d = data()
+    assert set(d['bilder']) == {'probe'}
+    assert build.validate(d) == []
+
+
+def test_bild_fehlt():
+    d = data()
+    d['themen'][0]['lern'].append(dict(bild=dict(n='gibtsnicht', u='x')))
+    assert any('gibtsnicht' in e for e in build.validate(d))
+
+
+def test_bild_braucht_unterschrift():
+    d = data()
+    d['themen'][0]['lern'].append(dict(bild=dict(n='probe')))
+    assert any('Bildunterschrift' in e for e in build.validate(d))
+
+
+def test_bild_unbenutzt():
+    d = data()
+    d['bilder']['extra'] = PROBE
+    assert any('extra' in e and 'nicht benutzt' in e for e in build.validate(d))
+
+
+@pytest.mark.parametrize('kaputt,wort', [
+    (PROBE.replace('<text x="330"', '<script>alert(1)</script><text x="330"'), 'script'),
+    (PROBE.replace('<rect ', '<rect onclick="alert(1)" '), 'onclick'),
+    (PROBE.replace('<rect ', '<rect style="fill:red" '), 'style'),
+    (PROBE.replace('class="rot"', 'fill="#ff0000"'), 'fill'),
+    (PROBE.replace('class="rot"', 'class="rot xyz"'), 'xyz'),
+    (PROBE.replace(' viewBox="0 0 400 140"', ''), 'viewBox'),
+    (PROBE.replace('url(#p)', 'url(#q)'), '#q'),
+    (PROBE.replace('<rect ', '<image href="http://x/y.png"/><rect '), 'image'),
+    (PROBE.replace('</svg>', ''), 'XML'),
+])
+def test_bild_unsicher_oder_kaputt(kaputt, wort):
+    errs = mit_bild(kaputt)
+    assert any(wort in e for e in errs), errs
+
+
+def test_bild_ids_bekommen_praefix(tmp_path):
+    html = build.build(FIX, tmp_path).read_text(encoding='utf-8')
+    assert 'id=\\"probe-p\\"' in html and 'url(#probe-p)' in html
+    assert 'id=\\"p\\"' not in html
+
+
+def test_bild_klassen_stehen_im_css():
+    css = (ROOT / 'app' / 'style.css').read_text(encoding='utf-8')
+    fehlt = [k for k in build.BILD_KLASSEN if f'.bild .{k}' not in css]
+    assert fehlt == []

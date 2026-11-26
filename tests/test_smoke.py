@@ -185,3 +185,32 @@ def test_ohne_speicher(browser, url):
     pg.click('nav.tabs a[data-tab="neu"]')
     pg.wait_for_selector('.neu-eintrag')
     assert pg.errors == []
+
+
+@pytest.mark.parametrize('scheme,textfarbe', [('light', 'rgb(22, 24, 29)'), ('dark', 'rgb(236, 238, 242)')])
+def test_bild_auf_lernseite(browser, url, scheme, textfarbe):
+    pg = new_page(browser, 360, 740, scheme)
+    go(pg, url, '#/lernen/energie')
+    fig = pg.locator('figure.bild')
+    assert fig.count() == 1
+    svg = fig.locator('svg')
+    assert svg.get_attribute('role') == 'img'
+    assert 'Probebild' in svg.get_attribute('aria-label') and '**' not in svg.get_attribute('aria-label')
+    assert fig.locator('figcaption b').inner_text() == 'Kasten'
+    assert pg.evaluate("getComputedStyle(document.querySelector('figure.bild text')).fill") == textfarbe
+    rect = pg.evaluate("getComputedStyle(document.querySelector('figure.bild rect')).fill")
+    assert rect not in ('rgb(0, 0, 0)', textfarbe)
+    assert pg.evaluate("document.querySelector('figure.bild marker').id") == 'probe-p'
+    # Bild steht direkt unter der Überschrift, vor dem Text
+    assert pg.evaluate("document.querySelector('figure.bild').nextElementSibling.tagName") == 'UL'
+    assert svg.bounding_box()['width'] <= 360
+    no_overflow(pg)
+    assert pg.errors == []
+
+
+def test_suche_findet_bildunterschrift(browser, url):
+    pg = new_page(browser)
+    go(pg, url, '#/suche')
+    pg.fill('#q', 'Probebild')
+    pg.wait_for_selector('.treffer')
+    assert 'Probebild' in pg.locator('.treffer').first.inner_text()

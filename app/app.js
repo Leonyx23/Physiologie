@@ -104,9 +104,25 @@ function merke(m) {
   return el('div', { class: 'merke' }, el('div', { class: 'merke-k', text: 'Merke' }),
     Array.isArray(m) ? liste(m) : el('p', null, rich(m)));
 }
+function bild(b) {
+  var fig = el('figure', { class: 'bild' });
+  var svg = D.bilder && D.bilder[b.n];
+  if (svg) {
+    var doc = new DOMParser().parseFromString(svg, 'image/svg+xml');
+    if (doc.documentElement.nodeName === 'svg') {
+      var node = document.importNode(doc.documentElement, true);
+      node.setAttribute('role', 'img');
+      node.setAttribute('aria-label', b.u.replace(/\*\*/g, ''));
+      fig.appendChild(node);
+    }
+  }
+  fig.appendChild(el('figcaption', null, rich(b.u)));
+  return fig;
+}
 function abschnitt(a, tag) {
   var box = el('section', { class: 'abschnitt' });
   if (a.h) box.appendChild(el(tag || 'h2', null, rich(a.h)));
+  if (a.bild) box.appendChild(bild(a.bild));
   if (a.li) box.appendChild(liste(a.li));
   if (a.tb) box.appendChild(tabelle(a.tb, true));
   if (a.tc) box.appendChild(tabelle(a.tc, false));
@@ -362,7 +378,7 @@ function normMap(s) { var out = '', map = []; for (var i = 0; i < s.length; i++)
 function woerter(q) { return normMap(q).s.split(/[^a-z0-9]+/).filter(Boolean); }
 function textVon(a) {
   var t = [];
-  (function walk(x) { if (typeof x === 'string') t.push(x.replace(/\*\*/g, '')); else if (Array.isArray(x)) x.forEach(walk); else if (x && typeof x === 'object') for (var k in x) if (k !== 'q' && k !== 'loop') walk(x[k]); })(a);
+  (function walk(x) { if (typeof x === 'string') t.push(x.replace(/\*\*/g, '')); else if (Array.isArray(x)) x.forEach(walk); else if (x && typeof x === 'object') for (var k in x) if (k !== 'q' && k !== 'loop' && k !== 'n') walk(x[k]); })(a);
   return t.join(' · ');
 }
 var INDEX = null;

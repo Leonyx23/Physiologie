@@ -7,6 +7,7 @@ THEMA = dict(
         dict(h='Ablauf', fl=dict(s=[['Glukose'], ['Pyruvat', 'Zytosol'], ['Laktat']])),
         dict(h='Kreislauf', fl=dict(s=[['Oxalacetat'], ['Citrat'], ['Oxalacetat']], loop=True)),
         dict(h='Energiedichte', br=dict(s=[['Kohlenhydrate', 4.1, '4,1 kcal/g'], ['Fett', 9.3, '9,3 kcal/g']])),
+        dict(h='Bild', bild=dict(n='probe', u='Probebild mit **Kasten** und Pfeil'), li=['Text unter dem Bild']),
         dict(h='Schichten', ly=dict(s=[['Außen', 'dick'], ['Innen']])),
         dict(m='Fett hat etwa die doppelte Energiedichte. Test </script> bleibt Text.'),
     ],

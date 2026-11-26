@@ -4,12 +4,13 @@ Aufruf: python3 tools/build.py [inhalt-ordner] [ausgabe-ordner]
 Schreibt vorschau.html (zum Ansehen) und pwa_plain.html (Grundlage für die verschlüsselte Web-App).
 """
 import importlib.util, json, re, sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 APP = ROOT / 'app'
 
-ABSCHNITT = {'h', 'li', 'tb', 'tc', 'fl', 'br', 'ly', 'm', 'q'}
+ABSCHNITT = {'h', 'bild', 'li', 'tb', 'tc', 'fl', 'br', 'ly', 'm', 'q'}
 INHALT_KEYS = ABSCHNITT - {'h', 'q'}
 THEMA_KEYS = {'id', 'titel', 'bereich', 'razzia', 'lern', 'kurz'}
 SET_KEYS = {'id', 'titel', 'razzia', 'fragen', 'kurz'}
@@ -18,6 +19,17 @@ FRAGE_KEYS = {'id', 'nr', 'thema', 'f', 'abb', 'a', 'q', 'korr'}
 
 class InhaltFehler(Exception):
     pass
+
+
+# Bilder: eigene SVG-Schaubilder in inhalt/bilder/<name>.svg. Farben nur über diese Klassen (hell/dunkel in
+# app/style.css), damit jedes Bild im Dunkelmodus lesbar bleibt.
+SVG = '{http://www.w3.org/2000/svg}'
+BILD_TAGS = {'svg', 'g', 'path', 'rect', 'circle', 'ellipse', 'line', 'polyline', 'polygon', 'text', 'tspan',
+             'defs', 'marker', 'title'}
+BILD_FARBEN = ('rot', 'blau', 'gelb', 'gruen', 'lila', 'akz', 'grau')
+BILD_KLASSEN = ({f + e for f in BILD_FARBEN for e in ('', '-v', '-s', '-t')}
+                | {'ink-v', 'bg-v', 'k', 'f', 'g', 'i', 'halo', 'w1', 'w2', 'w3', 'w0', 'd', 'nf'})
+FARB_ATTR = {'fill', 'stroke', 'color', 'stop-color', 'flood-color', 'lighting-color'}
 
 
 def _modul(path):
@@ -31,7 +43,9 @@ def load(src_dir):
     src = Path(src_dir)
     themen = [_modul(p).THEMA for p in sorted(src.glob('thema_*.py'))]
     sets = [_modul(p).FRAGEN for p in sorted(src.glob('fragen_*.py'))]
-    return dict(themen=themen, fragensets=sets, abteilungen=_modul(src / 'abteilungen.py').ABTEILUNGEN,
+    bilder = {p.stem: p.read_text(encoding='utf-8') for p in sorted((src / 'bilder').glob('*.svg'))}
+    return dict(themen=themen, fragensets=sets, bilder=bilder,
+                abteilungen=_modul(src / 'abteilungen.py').ABTEILUNGEN,
                 quellen=_modul(src / 'quellen.py').QUELLEN,
                 neu=_modul(src / 'neu.py').NEU)
 
@@ -68,7 +82,7 @@ def _text(x):
     return isinstance(x, str) and x.strip() != ''
 
 
-def _abschnitte(lst, quellen, wo, err):
+def _abschnitte(lst, ctx, wo, err):
     if not isinstance(lst, list) or not lst:
         err.append(f'{wo}: keine Abschnitte')
         return
@@ -84,6 +98,16 @@ def _abschnitte(lst, quellen, wo, err):
             err.append(f'{w}: kein Inhalt')
         if 'h' in a and not _text(a['h']):
             err.append(f'{w}: leere Überschrift')
+        if 'bild' in a:
+            b = a['bild']
+            if not isinstance(b, dict) or set(b) - {'n', 'u'}:
+                err.append(f'{w}: Bild muss dict(n=Name, u=Bildunterschrift) sein')
+            else:
+                if b.get('n') not in ctx['bilder']:
+                    err.append(f'{w}: Bild {b.get("n")!r} gibt es nicht in bilder/')
+                ctx['benutzt'].add(b.get('n'))
+                if not _text(b.get('u')):
+                    err.append(f'{w}: Bild ohne Bildunterschrift')
         if 'li' in a:
             for p in a['li']:
                 if isinstance(p, list):
@@ -120,12 +144,53 @@ def _abschnitte(lst, quellen, wo, err):
             if not (_text(m) or (isinstance(m, list) and m and all(_text(x) for x in m))):
                 err.append(f'{w}: leerer Merke-Kasten')
         if 'q' in a:
-            _quellen(a['q'], quellen, w, err)
+            _quellen(a['q'], ctx['quellen'], w, err)
+
+
+def _svg_pruefen(name, svg, err):
+    wo = f'Bild {name}'
+    if not re.fullmatch(r'[a-z0-9]+(-[a-z0-9]+)*', name):
+        err.append(f'{wo}: Name nur aus a–z, 0–9 und Bindestrich')
+    if '<!DOCTYPE' in svg or '<!ENTITY' in svg:
+        err.append(f'{wo}: DOCTYPE/ENTITY nicht erlaubt')
+        return
+    try:
+        root = ET.fromstring(svg)
+    except ET.ParseError as e:
+        err.append(f'{wo}: kein gültiges XML ({e})')
+        return
+    if root.tag != SVG + 'svg':
+        err.append(f'{wo}: Wurzel muss <svg xmlns="http://www.w3.org/2000/svg"> sein')
+    vb = root.get('viewBox', '').split()
+    if len(vb) != 4:
+        err.append(f'{wo}: viewBox fehlt')
+    ids, refs = set(), set()
+    for e in root.iter():
+        tag = e.tag[len(SVG):] if e.tag.startswith(SVG) else e.tag
+        if tag not in BILD_TAGS:
+            err.append(f'{wo}: Element <{tag}> nicht erlaubt')
+        for k, v in e.attrib.items():
+            if k.lower().startswith('on'):
+                err.append(f'{wo}: Attribut {k} nicht erlaubt')
+            elif k in ('style', 'href') or k.endswith('}href'):
+                err.append(f'{wo}: Attribut {k} nicht erlaubt (Farben über Klassen)')
+            elif k in FARB_ATTR and not (v in ('none', 'currentColor') or re.fullmatch(r'url\(#[\w-]+\)', v)):
+                err.append(f'{wo}: {k}="{v}" – Farben nur über Klassen')
+            elif k == 'class':
+                for c in v.split():
+                    if c not in BILD_KLASSEN:
+                        err.append(f'{wo}: unbekannte Klasse {c!r}')
+            elif k == 'id':
+                ids.add(v)
+            refs.update(re.findall(r'url\(#([\w-]+)\)', v))
+    for r in sorted(refs - ids):
+        err.append(f'{wo}: Verweis auf #{r}, aber kein Element mit dieser id')
 
 
 def validate(d):
     err = []
     quellen = d['quellen']
+    ctx = dict(quellen=quellen, bilder=d.get('bilder', {}), benutzt=set())
     for k, q in quellen.items():
         if not (_text(q.get('t')) and isinstance(q.get('seiten'), int)):
             err.append(f'Quelle {k}: braucht t und seiten')
@@ -158,7 +223,7 @@ def validate(d):
             err.append(f'{wo}: Abteilung {t.get("bereich")!r} steht nicht in abteilungen.py')
         seen(t.get('id'), wo)
         themen.add(t.get('id'))
-        _abschnitte(t.get('lern'), quellen, wo, err)
+        _abschnitte(t.get('lern'), ctx, wo, err)
     for s in d['fragensets']:
         wo = f'Fragen {s.get("id")}'
         for k in s:
@@ -177,9 +242,9 @@ def validate(d):
                 err.append(f'{fw}: Fragetext fehlt')
             if f.get('thema') not in themen:
                 err.append(f'{fw}: Thema {f.get("thema")!r} gibt es nicht')
-            _abschnitte(f.get('a'), quellen, fw, err)
+            _abschnitte(f.get('a'), ctx, fw, err)
             if 'abb' in f:
-                _abschnitte(f['abb'], quellen, fw + ' Abbildung', err)
+                _abschnitte(f['abb'], ctx, fw + ' Abbildung', err)
             if 'nr' in f and not _text(f['nr']):
                 err.append(f'{fw}: nr muss ein Text sein')
             if not f.get('q'):
@@ -188,14 +253,28 @@ def validate(d):
                 _quellen(f['q'], quellen, fw, err)
             if 'korr' in f and not (isinstance(f['korr'], list) and all(_text(x) for x in f['korr'])):
                 err.append(f'{fw}: korr muss eine Liste von Texten sein')
+    for name, svg in ctx['bilder'].items():
+        _svg_pruefen(name, svg, err)
+        if name not in ctx['benutzt']:
+            err.append(f'Bild {name}: wird nicht benutzt')
     for n in d['neu']:
         if not (_text(n.get('id')) and _text(n.get('titel')) and n.get('punkte')):
             err.append(f'Neu {n.get("id")}: id/titel/punkte fehlen')
     return err
 
 
+def _svg_fertig(name, svg):
+    """Kommentare und Einrückung weg; ids bekommen den Bildnamen davor (alle Bilder liegen in einem Dokument)."""
+    s = re.sub(r'<!--.*?-->', '', svg, flags=re.S).strip()
+    s = re.sub(r'>\s*\n\s*<', '><', s)
+    s = re.sub(r'\s*\n\s*', ' ', s)
+    s = re.sub(r'\bid="([\w-]+)"', lambda m: f'id="{name}-{m.group(1)}"', s)
+    return re.sub(r'url\(#([\w-]+)\)', lambda m: f'url(#{name}-{m.group(1)})', s)
+
+
 def _json(d):
     out = dict(themen=d['themen'], fragensets=d['fragensets'], neu=d['neu'], abteilungen=d['abteilungen'],
+               bilder={k: _svg_fertig(k, v) for k, v in d.get('bilder', {}).items()},
                quellen={k: dict(t=v['t'], seiten=v['seiten']) for k, v in d['quellen'].items()})
     s = json.dumps(out, ensure_ascii=False, separators=(',', ':'))
     return s.replace('<', '\\u003c')

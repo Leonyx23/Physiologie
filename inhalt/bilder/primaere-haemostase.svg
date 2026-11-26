@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 228">
+<text x="8" y="112" class="k">Gefäßlumen</text>
+<rect x="1" y="150" width="28" height="10" rx="4" class="akz"/>
+<rect x="31" y="150" width="28" height="10" rx="4" class="akz"/>
+<rect x="61" y="150" width="28" height="10" rx="4" class="akz"/>
+<rect x="91" y="150" width="28" height="10" rx="4" class="akz"/>
+<rect x="241" y="150" width="28" height="10" rx="4" class="akz"/>
+<rect x="271" y="150" width="28" height="10" rx="4" class="akz"/>
+<rect x="301" y="150" width="28" height="10" rx="4" class="akz"/>
+<rect x="331" y="150" width="28" height="10" rx="4" class="akz"/>
+<rect x="0" y="160" width="360" height="44" class="gelb w0"/>
+<path d="M0 168q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0" class="gelb-s w1"/>
+<path d="M0 180q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0" class="gelb-s w1"/>
+<path d="M0 192q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0q7 -5 14 0t14 0" class="gelb-s w1"/>
+<text x="8" y="142" class="k">Endothel</text>
+<text x="8" y="220" class="k">Kollagen unter dem Endothel</text>
+<path d="M128 162C122 146 140 140 134 128" class="lila-s w2"/>
+<ellipse cx="140" cy="120" rx="15" ry="7" class="lila"/>
+<path d="M172 162C168 150 182 144 178 136" class="lila-s w2"/>
+<polygon points="192.0,122.0 186.1,124.5 188.5,130.5 182.5,128.1 180.0,134.0 177.5,128.1 171.5,130.5 173.9,124.5 168.0,122.0 173.9,119.5 171.5,113.5 177.5,115.9 180.0,110.0 182.5,115.9 188.5,113.5 186.1,119.5" class="lila"/>
+<circle cx="166" cy="94" r="2.6" class="rot-v"/>
+<circle cx="196" cy="96" r="2.6" class="rot-v"/>
+<circle cx="182" cy="86" r="2.6" class="rot-v"/>
+<circle cx="204" cy="112" r="2.6" class="rot-v"/>
+<line x1="222" y1="134" x2="246" y2="128" class="gelb-s w3"/>
+<line x1="222" y1="134" x2="232" y2="108" class="gelb-s w3"/>
+<line x1="246" y1="128" x2="232" y2="108" class="gelb-s w3"/>
+<line x1="246" y1="128" x2="258" y2="104" class="gelb-s w3"/>
+<line x1="232" y1="108" x2="258" y2="104" class="gelb-s w3"/>
+<line x1="232" y1="108" x2="240" y2="84" class="gelb-s w3"/>
+<line x1="258" y1="104" x2="240" y2="84" class="gelb-s w3"/>
+<polygon points="233.0,134.0 227.6,136.3 229.8,141.8 224.3,139.6 222.0,145.0 219.7,139.6 214.2,141.8 216.4,136.3 211.0,134.0 216.4,131.7 214.2,126.2 219.7,128.4 222.0,123.0 224.3,128.4 229.8,126.2 227.6,131.7" class="lila"/>
+<polygon points="257.0,128.0 251.6,130.3 253.8,135.8 248.3,133.6 246.0,139.0 243.7,133.6 238.2,135.8 240.4,130.3 235.0,128.0 240.4,125.7 238.2,120.2 243.7,122.4 246.0,117.0 248.3,122.4 253.8,120.2 251.6,125.7" class="lila"/>
+<polygon points="243.0,108.0 237.6,110.3 239.8,115.8 234.3,113.6 232.0,119.0 229.7,113.6 224.2,115.8 226.4,110.3 221.0,108.0 226.4,105.7 224.2,100.2 229.7,102.4 232.0,97.0 234.3,102.4 239.8,100.2 237.6,105.7" class="lila"/>
+<polygon points="269.0,104.0 263.6,106.3 265.8,111.8 260.3,109.6 258.0,115.0 255.7,109.6 250.2,111.8 252.4,106.3 247.0,104.0 252.4,101.7 250.2,96.2 255.7,98.4 258.0,93.0 260.3,98.4 265.8,96.2 263.6,101.7" class="lila"/>
+<polygon points="251.0,84.0 245.6,86.3 247.8,91.8 242.3,89.6 240.0,95.0 237.7,89.6 232.2,91.8 234.4,86.3 229.0,84.0 234.4,81.7 232.2,76.2 237.7,78.4 240.0,73.0 242.3,78.4 247.8,76.2 245.6,81.7" class="lila"/>
+<text x="60" y="22" text-anchor="middle" class="s f">1 Adhäsion</text>
+<text x="60" y="39" text-anchor="middle" class="k">vWF + GP Ib</text>
+<line x1="60" y1="46" x2="132" y2="110" class="w1"/>
+<text x="180" y="22" text-anchor="middle" class="s f">2 Aktivierung</text>
+<text x="180" y="39" text-anchor="middle" class="k">ADP, Serotonin,</text>
+<text x="180" y="55" text-anchor="middle" class="k">Thromboxan A₂</text>
+<line x1="180" y1="62" x2="180" y2="78" class="w1"/>
+<text x="300" y="22" text-anchor="middle" class="s f">3 Aggregation</text>
+<text x="300" y="39" text-anchor="middle" class="k">Fibrinogen +</text>
+<text x="300" y="55" text-anchor="middle" class="k">GP IIb/IIIa</text>
+<line x1="300" y1="62" x2="258" y2="90" class="w1"/>
+</svg>

@@ -22,7 +22,7 @@ THEMA = dict(
             '**1 Mol** = 6,022 × 10²³ Teilchen (Avogadro) – so viele H-Atome wiegen 1 g',
             'Konzentrationen gibt man gern in mmol/l an, Mengen in g oder mg',
         ], m='Beispiel: 0,9 % NaCl = 9 g/l. NaCl wiegt 58,4 g/mol → 9 ÷ 58,4 = 0,154 mol/l = **154 mmol/l**.', q=[('BL', 7)]),
-        dict(h='pH-Wert', m='**pH = −log₁₀ [H⁺]**',
+        dict(h='pH-Wert', bild=dict(n='ph-skala', u='pH-Skala mit Beispielen aus dem Skript. Blut liegt knapp über 7, ist also **leicht basisch**.'), m='**pH = −log₁₀ [H⁺]**',
              li=['Säuren geben Protonen (H⁺) ab, Basen nehmen sie auf (Brønsted)',
                  'Wasser pH 7,0; sauer unter 7, basisch (alkalisch) über 7',
                  '−log₁₀ einfach gesagt: Stellen hinter dem Komma zählen – 0,0000001 → pH 7',
@@ -35,7 +35,7 @@ THEMA = dict(
                  '**Carboanhydrase** im Erythrozyten beschleunigt CO₂ + H₂O → H₂CO₃',
                  'Die **Lunge** atmet CO₂ ab, die **Niere** scheidet H⁺ und Bicarbonat aus bzw. holt sie zurück'],
              q=[('BL', '8–9')]),
-        dict(h='Proteine', li=[
+        dict(h='Proteine', bild=dict(n='protein-struktur', u='Die vier Strukturebenen eines Proteins – von der Kette der Aminosäuren bis zu mehreren Untereinheiten (z. B. Hämoglobin).'), li=[
             'Griech. proteios = der Erste; Proteine sind die „Sprache der Biochemie“',
             ['Aufgaben', 'Bewegung (Aktin, Myosin)', 'Struktur (Kollagen, Tubulin)', 'Transport (Hämoglobin, Transferrin)', 'Membranproteine (Ionenkanäle, Na⁺/K⁺-Pumpe)',
              'Enzyme', 'Speicher (Ferritin speichert Eisen)', 'Abwehr (Antikörper)'],

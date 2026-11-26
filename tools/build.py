@@ -28,7 +28,7 @@ BILD_TAGS = {'svg', 'g', 'path', 'rect', 'circle', 'ellipse', 'line', 'polyline'
              'defs', 'marker', 'title'}
 BILD_FARBEN = ('rot', 'blau', 'gelb', 'gruen', 'lila', 'akz', 'grau')
 BILD_KLASSEN = ({f + e for f in BILD_FARBEN for e in ('', '-v', '-s', '-t')}
-                | {'ink-v', 'bg-v', 'k', 'f', 'g', 'i', 'halo', 'w1', 'w2', 'w3', 'w0', 'd', 'nf'})
+                | {'ink-v', 'bg-v', 'k', 's', 'f', 'g', 'i', 'halo', 'w1', 'w2', 'w3', 'w0', 'd', 'nf'})
 FARB_ATTR = {'fill', 'stroke', 'color', 'stop-color', 'flood-color', 'lighting-color'}
 
 

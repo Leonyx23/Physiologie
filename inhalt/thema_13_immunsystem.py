@@ -2,7 +2,7 @@ THEMA = dict(
     id='immunsystem', titel='Immunsystem: Barrieren, Zellen und angeborene Abwehr', bereich='Blut und Immunsystem',
     kurz='Überblick, Barrieren, Mikrobiom, Immunzellen, Zytokine, Komplement, dendritische Zellen, Makrophagen, Neutrophile',
     lern=[
-        dict(h='Überblick', li=[
+        dict(h='Überblick', bild=dict(n='immun-ebenen', u='Drei Abwehrlinien: Barrieren und angeborene Abwehr fangen etwa **95 %** der Erreger ab, gegen den Rest lernt das erworbene Immunsystem.'), li=[
             'Das Immunsystem unterscheidet **Selbst** (eigener Körper) und **Fremd** (Erreger)',
             'Fehler: Reaktion gegen Harmloses = **Allergie** (bis zum anaphylaktischen Schock); Reaktion gegen Eigenes = **Autoimmunität** (z. B. Typ-1-Diabetes, M. Basedow, M. Bechterew, rheumatoide Arthritis)',
         ], tb=[['Unterscheidung', 'Möglichkeiten'],
@@ -61,7 +61,7 @@ THEMA = dict(
                       ['Signal 2: Ko-Stimulation', 'Rezeptoren für T-Helferzellen eingebaut'], ['Signal 3: Zytokine'], ['Wanderung in den Lymphknoten', 'zur passenden T-Helferzelle']]),
              m='Die dendritische Zelle ist der „Spion“, der Lymphknoten die „Geheimdienstzentrale“, die T-Helferzelle der „Geheimdienstchef“.',
              q=[('IM', '11–13')]),
-        dict(h='Makrophagen und Entzündung', li=[
+        dict(h='Makrophagen und Entzündung', bild=dict(n='phagozytose', u='Phagozytose durch einen Makrophagen: Erreger erkennen, umfließen, Lysosomen leeren ihre Enzyme hinein, der Erreger wird aufgelöst.'), li=[
             'Makrophagen tragen ebenfalls PRR. Sie umfließen den Erreger (**Endozytose**), Lysosomen entleeren sich ins Bläschen → Erreger wird aufgelöst (**Phagozytose**)',
             'Sie setzen Zytokine frei, u. a. Chemokine, die weitere Entzündungszellen anlocken',
             'Die ersten vier Entzündungszeichen stammen von **Celsus** (um die Zeitenwende)',

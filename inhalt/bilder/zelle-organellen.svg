@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300">
+<ellipse cx="140" cy="150" rx="112" ry="118" class="grau w2"/>
+<path d="M128.4 94.1A52 52 0 0 1 128.4 185.9" class="blau-s"/>
+<circle cx="136.1" cy="94.1" r="2" class="ink-v"/>
+<circle cx="144.3" cy="101.1" r="2" class="ink-v"/>
+<circle cx="151" cy="109.5" r="2" class="ink-v"/>
+<circle cx="155.9" cy="119" r="2" class="ink-v"/>
+<circle cx="159" cy="129.3" r="2" class="ink-v"/>
+<circle cx="160" cy="140" r="2" class="ink-v"/>
+<circle cx="159" cy="150.7" r="2" class="ink-v"/>
+<circle cx="155.9" cy="161" r="2" class="ink-v"/>
+<circle cx="151" cy="170.5" r="2" class="ink-v"/>
+<circle cx="144.3" cy="178.9" r="2" class="ink-v"/>
+<circle cx="136.1" cy="185.9" r="2" class="ink-v"/>
+<path d="M133.1 85.3A62 62 0 0 1 133.1 194.7" class="blau-s"/>
+<circle cx="141.9" cy="85.9" r="2" class="ink-v"/>
+<circle cx="151.5" cy="94.2" r="2" class="ink-v"/>
+<circle cx="159.4" cy="104.1" r="2" class="ink-v"/>
+<circle cx="165.2" cy="115.3" r="2" class="ink-v"/>
+<circle cx="168.8" cy="127.4" r="2" class="ink-v"/>
+<circle cx="170" cy="140" r="2" class="ink-v"/>
+<circle cx="168.8" cy="152.6" r="2" class="ink-v"/>
+<circle cx="165.2" cy="164.7" r="2" class="ink-v"/>
+<circle cx="159.4" cy="175.9" r="2" class="ink-v"/>
+<circle cx="151.5" cy="185.8" r="2" class="ink-v"/>
+<circle cx="141.9" cy="194.1" r="2" class="ink-v"/>
+<circle cx="104" cy="140" r="40" class="lila"/>
+<circle cx="114" cy="136" r="10" class="lila-v"/>
+<text x="104" y="166" text-anchor="middle" class="f">Zellkern</text>
+<text x="102" y="122" text-anchor="middle" class="k">Nukleolus</text>
+<path d="M158 206Q183 192 208 206" class="gelb-s"/>
+<path d="M158 213Q183 199 208 213" class="gelb-s"/>
+<path d="M158 220Q183 206 208 220" class="gelb-s"/>
+<path d="M158 227Q183 213 208 227" class="gelb-s"/>
+<circle cx="214" cy="200" r="3.5" class="gelb"/>
+<circle cx="218" cy="214" r="3.5" class="gelb"/>
+<ellipse cx="190" cy="86" rx="30" ry="14" class="rot" transform="rotate(-25 190 86)"/><polyline points="166,86 172,92 178,80 184,92 190,80 196,92 202,80 208,92 214,86" class="rot-s w1" transform="rotate(-25 190 86)"/>
+<ellipse cx="82" cy="228" rx="30" ry="14" class="rot" transform="rotate(18 82 228)"/><polyline points="58,228 64,234 70,222 76,234 82,222 88,234 94,222 100,234 106,228" class="rot-s w1" transform="rotate(18 82 228)"/>
+<circle cx="212" cy="150" r="13" class="gruen"/>
+<circle cx="207" cy="146" r="2" class="gruen-v"/>
+<circle cx="216" cy="148" r="2" class="gruen-v"/>
+<circle cx="211" cy="156" r="2" class="gruen-v"/>
+<circle cx="60" cy="80" r="2" class="ink-v"/>
+<circle cx="70" cy="95" r="2" class="ink-v"/>
+<circle cx="150" cy="240" r="2" class="ink-v"/>
+<circle cx="165" cy="255" r="2" class="ink-v"/>
+<circle cx="45" cy="160" r="2" class="ink-v"/>
+<circle cx="230" cy="110" r="2" class="ink-v"/>
+<circle cx="120" cy="65" r="2" class="ink-v"/>
+<circle cx="190" cy="175" r="2" class="ink-v"/>
+<line x1="214" y1="76" x2="252" y2="62" class="w1"/>
+<text x="256" y="66">Mitochondrium</text>
+<line x1="246" y1="112" x2="252" y2="108" class="w1"/>
+<text x="256" y="112">Zellmembran</text>
+<line x1="225" y1="150" x2="252" y2="150" class="w1"/>
+<text x="256" y="154">Lysosom</text>
+<line x1="210" y1="207" x2="252" y2="200" class="w1"/>
+<text x="256" y="204">Golgi-Apparat</text>
+<line x1="128" y1="194" x2="128" y2="276" class="w1"/>
+<text x="128" y="292" text-anchor="middle">raues ER mit Ribosomen</text>
+</svg>

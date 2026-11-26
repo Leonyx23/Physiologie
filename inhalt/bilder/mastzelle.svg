@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 244">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0L10 5L0 10z" class="grau-v"/></marker></defs>
+<circle cx="90" cy="150" r="54" class="grau"/>
+<circle cx="58.5" cy="159.7" r="4" class="lila-v"/>
+<circle cx="116.7" cy="136.2" r="4" class="lila-v"/>
+<circle cx="56.3" cy="148.3" r="4" class="lila-v"/>
+<circle cx="102.6" cy="178.9" r="4" class="lila-v"/>
+<circle cx="63.2" cy="121.5" r="4" class="lila-v"/>
+<circle cx="110.1" cy="163.5" r="4" class="lila-v"/>
+<circle cx="123.3" cy="171.4" r="4" class="lila-v"/>
+<circle cx="86.9" cy="141.6" r="4" class="lila-v"/>
+<circle cx="132.9" cy="145.2" r="4" class="lila-v"/>
+<circle cx="70.4" cy="121.6" r="4" class="lila-v"/>
+<circle cx="93" cy="154.5" r="4" class="lila-v"/>
+<circle cx="79.4" cy="148.1" r="4" class="lila-v"/>
+<circle cx="97.9" cy="170.1" r="4" class="lila-v"/>
+<circle cx="119.4" cy="155.6" r="4" class="lila-v"/>
+<circle cx="52.4" cy="164.7" r="4" class="lila-v"/>
+<circle cx="55" cy="145.8" r="4" class="lila-v"/>
+<circle cx="54.2" cy="150.1" r="4" class="lila-v"/>
+<circle cx="67.6" cy="156.1" r="4" class="lila-v"/>
+<path d="M43.2 123.0L31.1 116.0L22.1 116.7M31.1 116.0L27.2 107.9" class="blau-s w2"/>
+<path d="M63.0 103.2L56.0 91.1L47.9 87.2M56.0 91.1L56.7 82.1" class="blau-s w2"/>
+<path d="M90.0 96.0L90.0 82.0L84.9 74.6M90.0 82.0L95.1 74.6" class="blau-s w2"/>
+<path d="M117.0 103.2L124.0 91.1L123.3 82.1M124.0 91.1L132.1 87.2" class="blau-s w2"/>
+<path d="M136.8 123.0L148.9 116.0L152.8 107.9M148.9 116.0L157.9 116.7" class="blau-s w2"/>
+<circle cx="270" cy="150" r="54" class="grau"/>
+<circle cx="313.9" cy="149.4" r="4" class="lila-v"/>
+<circle cx="289.9" cy="118.8" r="4" class="lila-v"/>
+<circle cx="261.6" cy="169.3" r="4" class="lila-v"/>
+<circle cx="267.2" cy="161.3" r="4" class="lila-v"/>
+<circle cx="272.8" cy="122.3" r="4" class="lila-v"/>
+<circle cx="285.6" cy="127.5" r="4" class="lila-v"/>
+<circle cx="309.1" cy="139.4" r="4" class="lila-v"/>
+<circle cx="290.1" cy="150.1" r="4" class="lila-v"/>
+<circle cx="295.5" cy="133.9" r="4" class="lila-v"/>
+<circle cx="297.5" cy="146.6" r="4" class="lila-v"/>
+<circle cx="301.3" cy="165.5" r="4" class="lila-v"/>
+<circle cx="274.1" cy="127.5" r="4" class="lila-v"/>
+<circle cx="291.7" cy="163.2" r="4" class="lila-v"/>
+<circle cx="307.3" cy="141.4" r="4" class="lila-v"/>
+<circle cx="286.1" cy="164.7" r="4" class="lila-v"/>
+<circle cx="278.7" cy="156.4" r="4" class="lila-v"/>
+<circle cx="275.4" cy="132.3" r="4" class="lila-v"/>
+<circle cx="242.6" cy="139.3" r="4" class="lila-v"/>
+<path d="M223.2 123.0L211.1 116.0L202.1 116.7M211.1 116.0L207.2 107.9" class="blau-s w2"/>
+<path d="M251.5 99.3L246.7 86.1L239.4 80.9M246.7 86.1L249.0 77.4" class="blau-s w2"/>
+<path d="M288.5 99.3L293.3 86.1L291.0 77.4M293.3 86.1L300.6 80.9" class="blau-s w2"/>
+<path d="M316.8 123.0L328.9 116.0L332.8 107.9M328.9 116.0L337.9 116.7" class="blau-s w2"/>
+<path d="M249.0 77.4L270.0 67.4L291.0 77.4Z" class="gruen"/>
+<circle cx="330" cy="92" r="4" class="lila-v"/>
+<circle cx="342" cy="110" r="4" class="lila-v"/>
+<circle cx="334" cy="128" r="4" class="lila-v"/>
+<circle cx="350" cy="86" r="4" class="lila-v"/>
+<circle cx="322" cy="76" r="4" class="lila-v"/>
+<text x="214" y="66" text-anchor="end" class="s gruen-t">Allergen</text>
+<line x1="218" y1="62" x2="256" y2="80" class="gruen-s w1"/>
+<text x="356" y="64" text-anchor="end" class="s lila-t">Histamin</text>
+<line x1="160" y1="150" x2="200" y2="150" class="grau-s w2" marker-end="url(#a)"/>
+<text x="90" y="20" text-anchor="middle" class="s f">1. Sensibilisierung</text>
+<text x="90" y="38" text-anchor="middle" class="k">IgE sitzt mit Fc</text>
+<text x="90" y="54" text-anchor="middle" class="k">auf der Mastzelle</text>
+<text x="270" y="20" text-anchor="middle" class="s f">2. erneuter Kontakt</text>
+<text x="90" y="222" text-anchor="middle" class="k">Mastzelle mit</text>
+<text x="90" y="238" text-anchor="middle" class="k">Histamin-Granula</text>
+<text x="270" y="222" text-anchor="middle" class="k">Crosslinking</text>
+<text x="270" y="238" text-anchor="middle" class="k">→ Histamin wird frei</text>
+</svg>

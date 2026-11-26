@@ -13,7 +13,7 @@ THEMA = dict(
             'Es entstehen auch defekte oder **selbst-reaktive** Rezeptoren → diese Zellen müssen in Apoptose (sonst Immunschwäche oder Autoimmunität)',
             'Im Jugendalter entstehen täglich einige 100 Mio. T-Zellen, **99 %** werden aussortiert',
         ], q=[('IM', '16–18')]),
-        dict(h='MHC-Moleküle', tb=[
+        dict(h='MHC-Moleküle', bild=dict(n='mhc', u='**MHC I** (alle Körperzellen) zeigt der T-Killerzelle (CD8), was in der Zelle gebaut wird. **MHC II** (antigenpräsentierende Zellen) zeigt der T-Helferzelle (CD4) Stücke von Erregern.'), tb=[
             ['', 'MHC I', 'MHC II'],
             ['Wo', 'alle Körperzellen', 'antigenpräsentierende Zellen (dendritische Zellen, B-Zellen)'],
             ['Zeigt', 'Peptide aus dem Zellinneren („was gerade in der Zelle gebaut wird“)', 'Stücke aufgenommener Erreger'],
@@ -43,7 +43,7 @@ THEMA = dict(
                ['Tempo', 'langsamer', 'schneller'],
                ['Ergebnis', 'stark bindende Antikörper, **Gedächtniszellen**', 'schwächere Antikörper, keine Gedächtniszellen']],
              q=[('IM', '23–24')]),
-        dict(h='Antikörper', li=[
+        dict(h='Antikörper', bild=dict(n='antikoerper', u='Antikörper in Y-Form: 2 schwere und 2 leichte Ketten. Die beiden **Fab**-Arme binden das Antigen, der **Fc**-Teil dockt an.'), li=[
             'Form eines **Y**: 2 schwere und 2 leichte Ketten; **Fab** (2×) bindet das Antigen, **Fc** dockt an Immunzellen oder C1 an',
             '**Passive Impfung:** fertige Antikörper werden gegeben · **aktive Impfung:** Gedächtniszellen bilden sie selbst',
         ], tb=[['Typ', 'Form', 'Besonderheit'],
@@ -51,7 +51,7 @@ THEMA = dict(
                ['IgE', 'Monomer', 'Allergie (Mastzellen)'], ['IgG', 'Monomer', 'Plazenta-gängig, von Gedächtniszellen, lange haltbar'],
                ['IgA', 'Dimer', 'Schleimhäute'], ['IgD', '–', 'Entwicklung der B-Zellen']],
              m='Merkhilfe für die 5 Typen: **MEGAD**.', q=[('IM', '25–26')]),
-        dict(h='Antikörperprofile', tc=[['Situation', 'IgM', 'IgG'], ['frische Infektion', 'hoch', 'keins'], ['ältere Erstinfektion', 'niedrig', 'hoch'],
+        dict(h='Antikörperprofile', bild=dict(n='antikoerper-verlauf', u='Antikörper nach Erst- und Zweitkontakt: **IgM** kommt zuerst (frische Infektion), **IgG** später und bleibt. Beim zweiten Kontakt steigt IgG schnell und sehr hoch (Gedächtniszellen).'), tc=[['Situation', 'IgM', 'IgG'], ['frische Infektion', 'hoch', 'keins'], ['ältere Erstinfektion', 'niedrig', 'hoch'],
                                         ['frische Reinfektion', 'mittelhoch', 'schnell, sehr hoch'], ['ältere Reinfektion', 'keins', 'sehr hoch']],
              li=['**Drei Wirkungen:** 1. Neutralisation und Agglutination · 2. Opsonierung (Fc an Fcγ-Rezeptoren) · 3. Komplementaktivierung (klassischer Weg)'],
              q=[('IM', 27)]),

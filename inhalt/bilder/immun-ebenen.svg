@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 218">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0L10 5L0 10z" class="grau-v"/></marker></defs>
+<rect x="58" y="6" width="88" height="168" rx="10" class="grau"/>
+<rect x="150" y="6" width="100" height="168" rx="10" class="akz"/>
+<rect x="254" y="6" width="102" height="168" rx="10" class="lila"/>
+<rect x="7" y="50" width="14" height="8" rx="4" class="gruen" transform="rotate(10 14 54)"/>
+<rect x="21" y="68" width="14" height="8" rx="4" class="gruen" transform="rotate(-20 28 72)"/>
+<rect x="5" y="88" width="14" height="8" rx="4" class="gruen" transform="rotate(30 12 92)"/>
+<rect x="23" y="104" width="14" height="8" rx="4" class="gruen" transform="rotate(0 30 108)"/>
+<rect x="9" y="122" width="14" height="8" rx="4" class="gruen" transform="rotate(15 16 126)"/>
+<rect x="25" y="36" width="14" height="8" rx="4" class="gruen" transform="rotate(-10 32 40)"/>
+<line x1="38" y1="80" x2="56" y2="80" class="grau-s w2" marker-end="url(#a)"/>
+<rect x="59" y="46" width="14" height="8" rx="4" class="gruen" transform="rotate(90 66 50)"/>
+<rect x="61" y="68" width="14" height="8" rx="4" class="gruen" transform="rotate(90 68 72)"/>
+<rect x="58" y="90" width="14" height="8" rx="4" class="gruen" transform="rotate(90 65 94)"/>
+<rect x="62" y="112" width="14" height="8" rx="4" class="gruen" transform="rotate(90 69 116)"/>
+<path d="M170 56C168 40 196 34 212 44C232 40 238 64 226 74C232 92 206 100 192 92C174 98 160 84 170 72C160 66 162 58 170 56Z" class="bg-v"/>
+<path d="M170 56C168 40 196 34 212 44C232 40 238 64 226 74C232 92 206 100 192 92C174 98 160 84 170 72C160 66 162 58 170 56Z" class="akz-s"/>
+<circle cx="186" cy="66" r="9" class="lila-v"/>
+<circle cx="212" cy="72" r="11" class="gelb"/>
+<rect x="205" y="68" width="14" height="8" rx="4" class="gruen" transform="rotate(30 212 72)"/>
+<rect x="233" y="100" width="14" height="8" rx="4" class="gruen" transform="rotate(-20 240 104)"/>
+<rect x="151" y="108" width="14" height="8" rx="4" class="gruen" transform="rotate(20 158 112)"/>
+<rect x="298" y="62" width="14" height="8" rx="4" class="gruen" transform="rotate(0 305 66)"/>
+<path d="M290 96V84M290 84L283 76M290 84L297 76" class="lila-s w2" transform="rotate(40 290 84)"/>
+<path d="M320 96V84M320 84L313 76M320 84L327 76" class="lila-s w2" transform="rotate(-40 320 84)"/>
+<path d="M305 58V46M305 46L298 38M305 46L312 38" class="lila-s w2" transform="rotate(180 305 46)"/>
+<path d="M282 128V116M282 116L275 108M282 116L289 108" class="lila-s w2" transform="rotate(0 282 116)"/>
+<path d="M326 124V112M326 112L319 104M326 112L333 104" class="lila-s w2" transform="rotate(0 326 112)"/>
+<text x="102" y="26" text-anchor="middle" class="s f">Barrieren</text>
+<text x="200" y="26" text-anchor="middle" class="s f">angeboren</text>
+<text x="305" y="26" text-anchor="middle" class="s f">erworben</text>
+<text x="102" y="140" text-anchor="middle" class="k">Haut,</text>
+<text x="102" y="155" text-anchor="middle" class="k">Schleimhaut,</text>
+<text x="102" y="170" text-anchor="middle" class="k">Mikrobiom</text>
+<text x="200" y="140" text-anchor="middle" class="k">Fresszellen,</text>
+<text x="200" y="155" text-anchor="middle" class="k">Komplement</text>
+<text x="200" y="170" text-anchor="middle" class="k">schnell</text>
+<text x="305" y="140" text-anchor="middle" class="k">T-, B-Zellen,</text>
+<text x="305" y="155" text-anchor="middle" class="k">Antikörper</text>
+<text x="305" y="170" text-anchor="middle" class="k">Gedächtnis</text>
+<path d="M60 186V194H248V186" class="w1"/>
+<text x="154" y="212" text-anchor="middle" class="s">fangen ≈ 95 % ab</text>
+<path d="M256 186V194H354V186" class="w1"/>
+<text x="305" y="212" text-anchor="middle" class="s">Rest ≈ 5 %</text>
+</svg>

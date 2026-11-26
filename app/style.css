@@ -194,6 +194,6 @@ mark{background:color-mix(in srgb,var(--merke-l) 40%,transparent);color:inherit;
 .bild .grau{fill:var(--grau-h);stroke:var(--grau)} .bild .grau-v{fill:var(--grau);stroke:none} .bild .grau-s{fill:none;stroke:var(--grau);stroke-width:2} .bild .grau-t{fill:var(--grau)}
 .bild .akz{fill:var(--soft);stroke:var(--accent)} .bild .akz-v{fill:var(--accent);stroke:none} .bild .akz-s{fill:none;stroke:var(--accent);stroke-width:2} .bild .akz-t{fill:var(--accent)}
 .bild .ink-v{fill:currentColor;stroke:none} .bild .bg-v{fill:var(--surface);stroke:none}
-.bild .k{font-size:13px;fill:var(--muted)} .bild .f{font-weight:700} .bild .g{font-size:17px;font-weight:700} .bild .i{font-style:italic}
+.bild .k{font-size:13px;fill:var(--muted)} .bild .s{font-size:13px} .bild .f{font-weight:700} .bild .g{font-size:17px;font-weight:700} .bild .i{font-style:italic}
 .bild .halo{paint-order:stroke;stroke:var(--surface);stroke-width:4px;stroke-linejoin:round}
 .bild .w1{stroke-width:1} .bild .w2{stroke-width:2.5} .bild .w3{stroke-width:4} .bild .w0{stroke:none} .bild .d{stroke-dasharray:5 4} .bild .nf{fill:none}

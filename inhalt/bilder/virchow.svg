@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 228">
+<path d="M180 52L64 176L296 176Z" class="rot w2"/>
+<text x="180" y="140" text-anchor="middle" class="g rot-t">Thrombose</text>
+<circle cx="180" cy="52" r="13" class="bg-v"/>
+<circle cx="180" cy="52" r="13" class="w2"/>
+<text x="180" y="57" text-anchor="middle" class="s f">1</text>
+<circle cx="64" cy="176" r="13" class="bg-v"/>
+<circle cx="64" cy="176" r="13" class="w2"/>
+<text x="64" y="181" text-anchor="middle" class="s f">2</text>
+<circle cx="296" cy="176" r="13" class="bg-v"/>
+<circle cx="296" cy="176" r="13" class="w2"/>
+<text x="296" y="181" text-anchor="middle" class="s f">3</text>
+<text x="180" y="18" text-anchor="middle" class="f">Blutfluss verändert</text>
+<text x="180" y="33" text-anchor="middle" class="k">Stase – v. a. Venen</text>
+<text x="8" y="206" class="f">Gefäßwand</text>
+<text x="8" y="221" class="k">verändert – v. a. Arterien</text>
+<text x="352" y="206" text-anchor="end" class="f">Blutzusammensetzung</text>
+<text x="352" y="221" text-anchor="end" class="k">Thrombophilie – v. a. Venen</text>
+</svg>

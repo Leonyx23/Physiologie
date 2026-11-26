@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 186">
+<rect x="20" y="34" width="160" height="22" class="rot w0"/>
+<rect x="180" y="34" width="160" height="22" class="blau w0"/>
+<rect x="20" y="34" width="320" height="22" class="w1"/>
+<line x1="20" y1="56" x2="20" y2="61" class="w1"/>
+<text x="20" y="75" text-anchor="middle" class="k">0</text>
+<line x1="42.8571" y1="56" x2="42.8571" y2="61" class="w1"/>
+<text x="42.8571" y="75" text-anchor="middle" class="k">1</text>
+<line x1="65.7143" y1="56" x2="65.7143" y2="61" class="w1"/>
+<text x="65.7143" y="75" text-anchor="middle" class="k">2</text>
+<line x1="88.5714" y1="56" x2="88.5714" y2="61" class="w1"/>
+<text x="88.5714" y="75" text-anchor="middle" class="k">3</text>
+<line x1="111.429" y1="56" x2="111.429" y2="61" class="w1"/>
+<text x="111.429" y="75" text-anchor="middle" class="k">4</text>
+<line x1="134.286" y1="56" x2="134.286" y2="61" class="w1"/>
+<text x="134.286" y="75" text-anchor="middle" class="k">5</text>
+<line x1="157.143" y1="56" x2="157.143" y2="61" class="w1"/>
+<text x="157.143" y="75" text-anchor="middle" class="k">6</text>
+<line x1="180" y1="56" x2="180" y2="61" class="w1"/>
+<text x="180" y="75" text-anchor="middle" class="k">7</text>
+<line x1="202.857" y1="56" x2="202.857" y2="61" class="w1"/>
+<text x="202.857" y="75" text-anchor="middle" class="k">8</text>
+<line x1="225.714" y1="56" x2="225.714" y2="61" class="w1"/>
+<text x="225.714" y="75" text-anchor="middle" class="k">9</text>
+<line x1="248.571" y1="56" x2="248.571" y2="61" class="w1"/>
+<text x="248.571" y="75" text-anchor="middle" class="k">10</text>
+<line x1="271.429" y1="56" x2="271.429" y2="61" class="w1"/>
+<text x="271.429" y="75" text-anchor="middle" class="k">11</text>
+<line x1="294.286" y1="56" x2="294.286" y2="61" class="w1"/>
+<text x="294.286" y="75" text-anchor="middle" class="k">12</text>
+<line x1="317.143" y1="56" x2="317.143" y2="61" class="w1"/>
+<text x="317.143" y="75" text-anchor="middle" class="k">13</text>
+<line x1="340" y1="56" x2="340" y2="61" class="w1"/>
+<text x="340" y="75" text-anchor="middle" class="k">14</text>
+<text x="20" y="24" class="s f rot-t">sauer</text>
+<text x="180" y="24" text-anchor="middle" class="s">neutral</text>
+<text x="340" y="24" text-anchor="end" class="s f blau-t">basisch</text>
+<rect x="42.8571" y="94" width="22.8571" height="9" rx="3" class="rot-v"/>
+<text x="71.7143" y="103" class="s">Magensäure 1–2</text>
+<rect x="191.429" y="94" width="29.7143" height="9" rx="3" class="blau-v"/>
+<text x="227.143" y="103" class="s">Pankreas 7,5–8,8</text>
+<rect x="134.286" y="120" width="57.1429" height="9" rx="3" class="gelb-v"/>
+<text x="128.286" y="129" text-anchor="end" class="s">Urin 5–7,5</text>
+<line x1="189.143" y1="40" x2="189.143" y2="146" class="rot-s w1 d"/>
+<path d="M183.1 154L189.1 144L195.1 154Z" class="rot-v"/>
+<text x="201.143" y="160" class="f rot-t">Blut 7,37–7,43</text>
+<text x="201.143" y="177" class="k">leicht basisch</text>
+</svg>

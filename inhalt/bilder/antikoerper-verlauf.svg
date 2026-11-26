@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 202">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0L10 5L0 10z" class="ink-v"/></marker></defs>
+<path d="M40 22V176H350" class="w2"/>
+<line x1="52" y1="30" x2="52" y2="176" class="grau-s w1 d"/>
+<line x1="200" y1="30" x2="200" y2="176" class="grau-s w1 d"/>
+<path d="M52 176C59.0 176 59.0 176 66 176C81.0 176 81.0 112 96 112C111.0 112 111.0 172 126 172C138.0 172 138.0 176 150 176" class="gelb-s w3"/>
+<path d="M52 176C67.0 176 67.0 176 82 176C107.0 176 107.0 98 132 98C166.0 98 166.0 150 200 150C205.0 150 205.0 152 210 152" class="blau-s w3"/>
+<path d="M200 176C206.0 176 206.0 176 212 176C221.0 176 221.0 132 230 132C241.0 132 241.0 176 252 176C257.0 176 257.0 176 262 176" class="gelb-s w3"/>
+<path d="M210 152C212.0 152 212.0 152 214 152C230.0 152 230.0 36 246 36C298.0 36 298.0 64 350 64" class="blau-s w3"/>
+<text x="52" y="194" text-anchor="middle" class="k">1. Kontakt</text>
+<text x="200" y="194" text-anchor="middle" class="k">2. Kontakt</text>
+<text x="350" y="194" text-anchor="end" class="k">Zeit</text>
+<text x="30" y="100" text-anchor="middle" class="k" transform="rotate(-90 30 100)">Menge</text>
+<line x1="64" y1="30" x2="88" y2="30" class="gelb-s w3"/>
+<text x="94" y="35" class="s">IgM (zuerst)</text>
+<line x1="64" y1="52" x2="88" y2="52" class="blau-s w3"/>
+<text x="94" y="57" class="s">IgG (bleibt)</text>
+<text x="278" y="108" text-anchor="middle" class="s">schnell und</text>
+<text x="278" y="124" text-anchor="middle" class="s">sehr hoch</text>
+</svg>

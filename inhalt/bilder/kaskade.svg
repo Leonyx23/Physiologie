@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 394">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0L10 5L0 10z" class="ink-v"/></marker></defs>
+<text x="90" y="18" text-anchor="middle" class="s f gruen-t">extrinsisch</text>
+<text x="270" y="18" text-anchor="middle" class="s f blau-t">intrinsisch</text>
+<rect x="20" y="28" width="140" height="44" rx="8" class="gruen"/>
+<text x="90" y="47" text-anchor="middle" class="s f">Verletzung:</text>
+<text x="90" y="63" text-anchor="middle" class="s">Gewebefaktor (III)</text>
+<line x1="90" y1="72" x2="90" y2="92" class="w2" marker-end="url(#a)"/>
+<rect x="40" y="94" width="100" height="30" rx="8" class="gruen"/>
+<text x="90" y="114" text-anchor="middle" class="s f">VIIa</text>
+<circle cx="138" cy="96" r="9" class="gelb-v"/>
+<text x="138" y="100.5" text-anchor="middle" class="s f">K</text>
+<rect x="200" y="28" width="140" height="44" rx="8" class="blau"/>
+<text x="270" y="47" text-anchor="middle" class="s f">XII</text>
+<text x="270" y="63" text-anchor="middle" class="s">z. B. an Glas</text>
+<line x1="270" y1="72" x2="270" y2="82" class="w2" marker-end="url(#a)"/>
+<rect x="225" y="84" width="90" height="26" rx="8" class="blau"/>
+<text x="270" y="102" text-anchor="middle" class="s f">XIa</text>
+<line x1="270" y1="110" x2="270" y2="120" class="w2" marker-end="url(#a)"/>
+<rect x="215" y="122" width="110" height="26" rx="8" class="blau"/>
+<text x="270" y="140" text-anchor="middle" class="s f">IXa + VIIIa</text>
+<circle cx="323" cy="124" r="9" class="gelb-v"/>
+<text x="323" y="128.5" text-anchor="middle" class="s f">K</text>
+<path d="M90 124C90 150 140 156 158 166" class="w2" marker-end="url(#a)"/>
+<path d="M270 148C270 158 230 160 204 166" class="w2" marker-end="url(#a)"/>
+<rect x="130" y="168" width="100" height="30" rx="8" class="rot"/>
+<text x="180" y="188" text-anchor="middle" class="s f">Xa + Va</text>
+<circle cx="228" cy="170" r="9" class="gelb-v"/>
+<text x="228" y="174.5" text-anchor="middle" class="s f">K</text>
+<line x1="180" y1="198" x2="180" y2="212" class="w2" marker-end="url(#a)"/>
+<rect x="95" y="214" width="170" height="44" rx="8" class="rot"/>
+<text x="180" y="233" text-anchor="middle" class="s f">Thrombin (IIa)</text>
+<text x="180" y="249" text-anchor="middle" class="s">aus Prothrombin (II)</text>
+<circle cx="263" cy="216" r="9" class="gelb-v"/>
+<text x="263" y="220.5" text-anchor="middle" class="s f">K</text>
+<line x1="180" y1="258" x2="180" y2="272" class="w2" marker-end="url(#a)"/>
+<rect x="95" y="274" width="170" height="44" rx="8" class="rot"/>
+<text x="180" y="293" text-anchor="middle" class="s f">Fibrin</text>
+<text x="180" y="309" text-anchor="middle" class="s">aus Fibrinogen (I)</text>
+<line x1="180" y1="318" x2="180" y2="332" class="w2" marker-end="url(#a)"/>
+<rect x="95" y="334" width="170" height="30" rx="8" class="rot"/>
+<text x="180" y="354" text-anchor="middle" class="s f">XIIIa vernetzt</text>
+<text x="8" y="386" class="k">gemeinsame Endstrecke: rot</text>
+<circle cx="240" cy="381" r="8" class="gelb-v"/>
+<text x="240" y="385.5" text-anchor="middle" class="s f">K</text>
+<text x="254" y="386" class="k">Vitamin K nötig</text>
+</svg>

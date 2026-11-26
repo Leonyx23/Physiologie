@@ -13,7 +13,7 @@ THEMA = dict(
             ['2. Sekundäre Hämostase', 'plasmatische Gerinnung: Fibrinogen → Fibrin, Quervernetzung', '**roter Thrombus** (Erythrozyten im Fibrinnetz)'],
             ['3. Fibrinolyse', 'Plasmin spaltet das Fibrin, wenn das Endothel geheilt ist', 'Thrombus löst sich (D-Dimere)'],
         ], q=[('GE', '1, 17')]),
-        dict(h='Primäre Hämostase', fl=dict(s=[
+        dict(h='Primäre Hämostase', bild=dict(n='primaere-haemostase', u='Primäre Hämostase an einer Gefäßwunde: Thrombozyten haften am freiliegenden Kollagen, werden aktiviert und verkleben über Fibrinogen zum **weißen Thrombus**.'), fl=dict(s=[
             ['Vaskuläre Blutstillung', 'glatte Muskeln ziehen sich innerhalb von Sekunden zusammen (ca. 60 s), verstärkt durch Serotonin und Thromboxan A₂'],
             ['Adhäsion', 'vWF bindet am freiliegenden Kollagen (Typ I, IV); Thrombozyten binden mit dem **vWF-Rezeptor (GP Ib)** und dem **Kollagenrezeptor (GP Ia/IIa)**'],
             ['Aktivierung', 'Formänderung mit Fortsätzen; Freisetzung von **ADP, Serotonin, Thromboxan A₂** → weitere Thrombozyten werden aktiviert'],
@@ -31,7 +31,7 @@ THEMA = dict(
             ['Lipoproteine lagern sich in der Intima ein', 'Makrophagen schaffen es nicht → Entzündung'],
             ['Glatte Muskelzellen wandern ein, die Wand verkalkt'], ['Plaque bricht auf', 'Thrombozyten aggregieren → Verschluss']]),
              li=['Gut **90 %** aller Herzinfarkte entstehen so; bei Schlaganfällen ist es etwa ein Drittel'], q=[('GE', '6–7')]),
-        dict(h='Sekundäre Hämostase: Kaskadenmodell', tb=[
+        dict(h='Sekundäre Hämostase: Kaskadenmodell', bild=dict(n='kaskade', u='Kaskadenmodell: Beide Wege aktivieren Faktor X, am Ende steht vernetztes Fibrin. **K** = Vitamin-K-abhängige Faktoren (II, VII, IX, X).'), tb=[
             ['Weg', 'Start', 'Ablauf'],
             ['Extrinsisch (exogen)', 'Verletzung legt **Gewebefaktor (III)** frei', 'III + VII → aktiviert X'],
             ['Intrinsisch (endogen)', '**XII** an negativen Oberflächen (z. B. Glas im Röhrchen)', 'XII → XI → IX (+ VIII) → aktiviert X'],

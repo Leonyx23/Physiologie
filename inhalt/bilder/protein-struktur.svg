@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 150">
+<polyline points="14,54 23.5,70 33,54 42.5,70 52,54 61.5,70 71,54 80.5,70" class="w1"/>
+<circle cx="14" cy="54" r="5" class="rot"/>
+<circle cx="23.5" cy="70" r="5" class="blau"/>
+<circle cx="33" cy="54" r="5" class="gelb"/>
+<circle cx="42.5" cy="70" r="5" class="gruen"/>
+<circle cx="52" cy="54" r="5" class="lila"/>
+<circle cx="61.5" cy="70" r="5" class="rot"/>
+<circle cx="71" cy="54" r="5" class="blau"/>
+<circle cx="80.5" cy="70" r="5" class="gelb"/>
+<polyline points="135.0,96.0 145.0,95.0 152.3,94.0 155.0,93.0 152.3,92.0 145.0,91.0 135.0,90.0 125.0,89.0 117.7,88.0 115.0,87.0 117.7,86.0 125.0,85.0 135.0,84.0 145.0,83.0 152.3,82.0 155.0,81.0 152.3,80.0 145.0,79.0 135.0,78.0 125.0,77.0 117.7,76.0 115.0,75.0 117.7,74.0 125.0,73.0 135.0,72.0 145.0,71.0 152.3,70.0 155.0,69.0 152.3,68.0 145.0,67.0 135.0,66.0 125.0,65.0 117.7,64.0 115.0,63.0 117.7,62.0 125.0,61.0 135.0,60.0 145.0,59.0 152.3,58.0 155.0,57.0 152.3,56.0 145.0,55.0 135.0,54.0 125.0,53.0 117.7,52.0 115.0,51.0 117.7,50.0 125.0,49.0 135.0,48.0 145.0,47.0 152.3,46.0 155.0,45.0 152.3,44.0 145.0,43.0 135.0,42.0 125.0,41.0 117.7,40.0 115.0,39.0 117.7,38.0 125.0,37.0 135.0,36.0" class="blau-s w2"/>
+<path d="M200 92C190 70 212 60 222 72S246 96 238 70S206 40 222 34S254 46 250 66" class="gruen-s w2"/>
+<polyline points="214.0,86.0 219.7,85.1 222.0,84.2 219.7,83.3 214.0,82.4 208.3,81.5 206.0,80.6 208.3,79.7 214.0,78.8 219.7,77.9 222.0,77.0 219.7,76.1 214.0,75.2 208.3,74.3 206.0,73.4 208.3,72.5 214.0,71.6 219.7,70.7 222.0,69.8 219.7,68.9 214.0,68.0 208.3,67.1 206.0,66.2 208.3,65.3 214.0,64.4" class="gruen-s w2"/>
+<circle cx="300" cy="50" r="17" class="rot"/>
+<circle cx="332" cy="50" r="17" class="blau"/>
+<circle cx="300" cy="82" r="17" class="blau"/>
+<circle cx="332" cy="82" r="17" class="rot"/>
+<text x="45" y="126" text-anchor="middle" class="s f">Primär</text>
+<text x="45" y="143" text-anchor="middle" class="k">Reihenfolge</text>
+<text x="135" y="126" text-anchor="middle" class="s f">Sekundär</text>
+<text x="135" y="143" text-anchor="middle" class="k">Helix</text>
+<text x="225" y="126" text-anchor="middle" class="s f">Tertiär</text>
+<text x="225" y="143" text-anchor="middle" class="k">Faltung</text>
+<text x="316" y="126" text-anchor="middle" class="s f">Quartär</text>
+<text x="316" y="143" text-anchor="middle" class="k">Untereinheiten</text>
+</svg>

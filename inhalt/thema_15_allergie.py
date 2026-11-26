@@ -13,7 +13,7 @@ THEMA = dict(
              tc=[['Weg', 'Beispiele'], ['Nahrung', 'Nüsse, Schokolade, Erdbeeren, Kiwi, Gewürze'], ['Einatmen', 'Pollen (Gräser, Bäume), Hausstaub (Milbenkot), Tierhaare (Hund, Katze, Pferd)'],
                  ['Medikamente', 'Antibiotika, Schmerzmittel'], ['Gifte', 'Insekten, Schlangen, Quallen']],
              q=[('IM', '29–30')]),
-        dict(h='Typ I: Sensibilisierung und Auslösung', fl=dict(s=[
+        dict(h='Typ I: Sensibilisierung und Auslösung', bild=dict(n='mastzelle', u='Allergie Typ I: Nach der Sensibilisierung sitzt IgE auf den Mastzellen. Beim nächsten Kontakt verbindet das Allergen zwei IgE (**Crosslinking**), die Mastzelle schüttet **Histamin** aus.'), fl=dict(s=[
             ['B-Zelle nimmt das Allergen auf', 'über ihren B-Zell-Rezeptor'], ['Präsentation auf MHC II'], ['Aktivierung durch T-Helferzellen'],
             ['B-Zelle wird Plasmazelle', 'bildet **IgE**'], ['IgE bindet mit Fc an Mastzellen', 'Sensibilisierung abgeschlossen'],
             ['Erneuter Kontakt', 'Allergen verbindet zwei IgE (**Crosslinking**) → Histamin']]),

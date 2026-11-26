@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 148">
+<circle cx="46" cy="62" r="38" class="grau"/>
+<circle cx="46" cy="62" r="24" class="d w1"/>
+<path d="M32 48L44 60M44 48L32 60" class="lila-s w2" transform="rotate(20 38 54)"/>
+<path d="M50 56L62 68M62 56L50 68" class="lila-s w2" transform="rotate(-10 56 62)"/>
+<path d="M36 66L48 78M48 66L36 78" class="lila-s w2" transform="rotate(45 42 72)"/>
+<circle cx="136" cy="62" r="38" class="grau"/>
+<line x1="106" y1="62" x2="136" y2="46" class="akz-s w1"/>
+<line x1="166" y1="62" x2="136" y2="46" class="akz-s w1"/>
+<path d="M130 40L142 52M142 40L130 52" class="lila-s w2" transform="rotate(45 136 46)"/>
+<line x1="106" y1="62" x2="136" y2="62" class="akz-s w1"/>
+<line x1="166" y1="62" x2="136" y2="62" class="akz-s w1"/>
+<path d="M130 56L142 68M142 56L130 68" class="lila-s w2" transform="rotate(45 136 62)"/>
+<line x1="106" y1="62" x2="136" y2="78" class="akz-s w1"/>
+<line x1="166" y1="62" x2="136" y2="78" class="akz-s w1"/>
+<path d="M130 72L142 84M142 72L130 84" class="lila-s w2" transform="rotate(45 136 78)"/>
+<circle cx="106" cy="62" r="3" class="akz-v"/>
+<circle cx="166" cy="62" r="3" class="akz-v"/>
+<circle cx="226" cy="62" r="38" class="grau"/>
+<line x1="196" y1="62" x2="212" y2="48" class="akz-s w1"/>
+<line x1="256" y1="62" x2="240" y2="48" class="akz-s w1"/>
+<path d="M218 42L210 48L218 54" class="lila-s w2"/>
+<path d="M234 42L242 48L234 54" class="lila-s w2"/>
+<line x1="196" y1="62" x2="212" y2="62" class="akz-s w1"/>
+<line x1="256" y1="62" x2="240" y2="62" class="akz-s w1"/>
+<path d="M218 56L210 62L218 68" class="lila-s w2"/>
+<path d="M234 56L242 62L234 68" class="lila-s w2"/>
+<line x1="196" y1="62" x2="212" y2="76" class="akz-s w1"/>
+<line x1="256" y1="62" x2="240" y2="76" class="akz-s w1"/>
+<path d="M218 70L210 76L218 82" class="lila-s w2"/>
+<path d="M234 70L242 76L234 82" class="lila-s w2"/>
+<circle cx="196" cy="62" r="3" class="akz-v"/>
+<circle cx="256" cy="62" r="3" class="akz-v"/>
+<path d="M316 40C302 30 276 36 276 62C276 88 302 94 316 84C330 94 356 88 356 62C356 36 330 30 316 40Z" class="grau"/>
+<circle cx="298" cy="62" r="12" class="lila"/>
+<circle cx="334" cy="62" r="12" class="lila"/>
+<text x="46" y="122" text-anchor="middle" class="s f">Prophase</text>
+<text x="136" y="122" text-anchor="middle" class="s f">Metaphase</text>
+<text x="226" y="122" text-anchor="middle" class="s f">Anaphase</text>
+<text x="316" y="122" text-anchor="middle" class="s f">Telophase</text>
+<text x="46" y="139" text-anchor="middle" class="k">Chromosomen</text>
+<text x="136" y="139" text-anchor="middle" class="k">in der Mitte</text>
+<text x="226" y="139" text-anchor="middle" class="k">auseinander</text>
+<text x="316" y="139" text-anchor="middle" class="k">2 Tochterzellen</text>
+</svg>

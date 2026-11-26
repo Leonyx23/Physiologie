@@ -19,7 +19,7 @@ THEMA = dict(
              li=['Ein 70-kg-Mann hat etwa **30 Billionen Körperzellen** und etwa **39 Billionen Bakterien** (v. a. im Darm) – die Bakterien wiegen nur ca. 0,2 kg',
                  'Bakterien (**Prokaryonten**, ohne Zellkern) teilen sich in zwei neue Bakterien; menschliche Zellen (**Eukaryonten**) teilen sich, bleiben aber Teil desselben Organismus'],
              q=[('GL', 2)]),
-        dict(h='Die Zellorganellen', tb=[
+        dict(h='Die Zellorganellen', bild=dict(n='zelle-organellen', u='Schema einer menschlichen Zelle mit den wichtigsten Organellen (nicht maßstabsgetreu).'), tb=[
             ['Organell', 'Aufgabe'],
             ['Zellmembran', 'grenzt die Zelle ab'],
             ['Zellkern', 'Informationszentrale mit der DNA (ca. 2 m lang); 46 Chromosomen (23 von der Mutter, 23 vom Vater; Paar 23 = Geschlechtschromosomen)'],
@@ -32,13 +32,13 @@ THEMA = dict(
             ['Zilien', 'z. B. Atemwegsepithel: transportieren Schadstoffe aus der Lunge'],
         ], m='**Endosymbiontentheorie:** Mitochondrien waren einmal eigenständige Bakterien, die von einer Wirtszelle aufgenommen wurden – daher die doppelte Membran und die eigene DNA.',
              q=[('GL', '2–3')]),
-        dict(h='Die Zellmembran', li=[
+        dict(h='Die Zellmembran', bild=dict(n='membran', u='Zellmembran als **Lipiddoppelschicht**: Köpfe zum Wasser (außen und innen), Schwänze nach innen. Dazwischen Proteine, außen Zuckerketten (Glykokalyx).'), li=[
             'Doppelschicht aus **Phospholipiden** (Flüssig-Mosaik-Modell): hydrophile Köpfe nach außen und innen zum Wasser, hydrophobe Schwänze nach innen',
             'Außen Zuckerketten (**Glykokalyx**), z. B. als Rezeptoren',
             'Dazwischen **Transmembranproteine**, z. B. Kanäle für Ionen, Glukose, Laktat',
             'Schützt vor mechanischer und chemischer Schädigung – nicht vor radioaktiver Strahlung',
         ], q=[('GL', 4)]),
-        dict(h='Transport durch die Membran', tb=[
+        dict(h='Transport durch die Membran', bild=dict(n='membrantransport', u='Wege durch die Membran (oben außen, unten innen): Diffusion und Kanäle kommen ohne Energie aus, die **Na⁺/K⁺-Pumpe** und Bläschen brauchen ATP.'), tb=[
             ['Art', 'Was passiert', 'Energie'],
             ['Diffusion', 'Teilchen wandern entlang des Konzentrationsgefälles, bis die Konzentration ausgeglichen ist', 'nein'],
             ['Osmose', 'Wasser fließt durch eine **semipermeable** Membran zur höheren Teilchenkonzentration', 'nein'],
@@ -64,7 +64,7 @@ THEMA = dict(
                  'Die **Leber** regeneriert sich sogar nach Entfernung von bis zu ¾ (Wachstumsfaktoren) – Sage von Prometheus',
                  'Für Leberzellen nennt deine Zusammenfassung 10–15 Tage; Lehrbücher geben eher Monate bis über ein Jahr an'],
              q=[('GL', '6–7'), ('BL', '2–3')]),
-        dict(h='Zellzyklus und Mitose', fl=dict(s=[
+        dict(h='Zellzyklus und Mitose', bild=dict(n='mitose', u='Die vier Phasen der Mitose – am Ende stehen **2 identische Tochterzellen**.'), fl=dict(s=[
             ['G1-Phase', 'Zelle wächst, Organellen vermehren sich, Proteine werden gebildet'],
             ['S-Phase', 'DNA wird verdoppelt (Polymerase kopiert jeden Strang)'],
             ['G2-Phase', 'Kontrolle der Kopie – bei Fehlern Apoptose'],

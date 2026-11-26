@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 236">
+<path d="M13 84V110M19 84V108" class="gelb-s w1"/>
+<circle cx="16" cy="78" r="6" class="gelb"/>
+<path d="M13 146V120M19 146V122" class="gelb-s w1"/>
+<circle cx="16" cy="152" r="6" class="gelb"/>
+<path d="M27 84V110M33 84V108" class="gelb-s w1"/>
+<circle cx="30" cy="78" r="6" class="gelb"/>
+<path d="M27 146V120M33 146V122" class="gelb-s w1"/>
+<circle cx="30" cy="152" r="6" class="gelb"/>
+<path d="M41 84V110M47 84V108" class="gelb-s w1"/>
+<circle cx="44" cy="78" r="6" class="gelb"/>
+<path d="M41 146V120M47 146V122" class="gelb-s w1"/>
+<circle cx="44" cy="152" r="6" class="gelb"/>
+<path d="M55 84V110M61 84V108" class="gelb-s w1"/>
+<circle cx="58" cy="78" r="6" class="gelb"/>
+<path d="M55 146V120M61 146V122" class="gelb-s w1"/>
+<circle cx="58" cy="152" r="6" class="gelb"/>
+<path d="M69 84V110M75 84V108" class="gelb-s w1"/>
+<circle cx="72" cy="78" r="6" class="gelb"/>
+<path d="M69 146V120M75 146V122" class="gelb-s w1"/>
+<circle cx="72" cy="152" r="6" class="gelb"/>
+<path d="M83 84V110M89 84V108" class="gelb-s w1"/>
+<circle cx="86" cy="78" r="6" class="gelb"/>
+<path d="M83 146V120M89 146V122" class="gelb-s w1"/>
+<circle cx="86" cy="152" r="6" class="gelb"/>
+<path d="M97 84V110M103 84V108" class="gelb-s w1"/>
+<circle cx="100" cy="78" r="6" class="gelb"/>
+<path d="M97 146V120M103 146V122" class="gelb-s w1"/>
+<circle cx="100" cy="152" r="6" class="gelb"/>
+<path d="M111 84V110M117 84V108" class="gelb-s w1"/>
+<circle cx="114" cy="78" r="6" class="gelb"/>
+<path d="M111 146V120M117 146V122" class="gelb-s w1"/>
+<circle cx="114" cy="152" r="6" class="gelb"/>
+<path d="M125 84V110M131 84V108" class="gelb-s w1"/>
+<circle cx="128" cy="78" r="6" class="gelb"/>
+<path d="M125 146V120M131 146V122" class="gelb-s w1"/>
+<circle cx="128" cy="152" r="6" class="gelb"/>
+<path d="M139 84V110M145 84V108" class="gelb-s w1"/>
+<circle cx="142" cy="78" r="6" class="gelb"/>
+<path d="M139 146V120M145 146V122" class="gelb-s w1"/>
+<circle cx="142" cy="152" r="6" class="gelb"/>
+<path d="M223 84V110M229 84V108" class="gelb-s w1"/>
+<circle cx="226" cy="78" r="6" class="gelb"/>
+<path d="M223 146V120M229 146V122" class="gelb-s w1"/>
+<circle cx="226" cy="152" r="6" class="gelb"/>
+<path d="M237 84V110M243 84V108" class="gelb-s w1"/>
+<circle cx="240" cy="78" r="6" class="gelb"/>
+<path d="M237 146V120M243 146V122" class="gelb-s w1"/>
+<circle cx="240" cy="152" r="6" class="gelb"/>
+<path d="M251 84V110M257 84V108" class="gelb-s w1"/>
+<circle cx="254" cy="78" r="6" class="gelb"/>
+<path d="M251 146V120M257 146V122" class="gelb-s w1"/>
+<circle cx="254" cy="152" r="6" class="gelb"/>
+<path d="M307 84V110M313 84V108" class="gelb-s w1"/>
+<circle cx="310" cy="78" r="6" class="gelb"/>
+<path d="M307 146V120M313 146V122" class="gelb-s w1"/>
+<circle cx="310" cy="152" r="6" class="gelb"/>
+<path d="M321 84V110M327 84V108" class="gelb-s w1"/>
+<circle cx="324" cy="78" r="6" class="gelb"/>
+<path d="M321 146V120M327 146V122" class="gelb-s w1"/>
+<circle cx="324" cy="152" r="6" class="gelb"/>
+<path d="M335 84V110M341 84V108" class="gelb-s w1"/>
+<circle cx="338" cy="78" r="6" class="gelb"/>
+<path d="M335 146V120M341 146V122" class="gelb-s w1"/>
+<circle cx="338" cy="152" r="6" class="gelb"/>
+<rect x="150" y="58" width="26" height="114" rx="10" class="blau"/>
+<rect x="188" y="58" width="26" height="114" rx="10" class="blau"/>
+<circle cx="182" cy="84" r="4" class="ink-v"/>
+<circle cx="182" cy="112" r="4" class="ink-v"/>
+<circle cx="182" cy="140" r="4" class="ink-v"/>
+<line x1="182" y1="60" x2="182" y2="170" class="w1 d"/>
+<rect x="264" y="60" width="36" height="112" rx="14" class="lila"/>
+<line x1="58" y1="72" x2="58" y2="42" class="gruen-s w1"/>
+<circle cx="54" cy="64" r="4" class="gruen"/>
+<circle cx="62" cy="54" r="4" class="gruen"/>
+<circle cx="54" cy="44" r="4" class="gruen"/>
+<circle cx="68" cy="50" r="4" class="gruen"/>
+<line x1="282" y1="58" x2="282" y2="28" class="gruen-s w1"/>
+<circle cx="278" cy="50" r="4" class="gruen"/>
+<circle cx="286" cy="40" r="4" class="gruen"/>
+<circle cx="278" cy="30" r="4" class="gruen"/>
+<circle cx="292" cy="36" r="4" class="gruen"/>
+<line x1="338" y1="72" x2="338" y2="42" class="gruen-s w1"/>
+<circle cx="334" cy="64" r="4" class="gruen"/>
+<circle cx="342" cy="54" r="4" class="gruen"/>
+<circle cx="334" cy="44" r="4" class="gruen"/>
+<circle cx="348" cy="50" r="4" class="gruen"/>
+<text x="10" y="26" class="s">Glykokalyx</text>
+<text x="182" y="26" text-anchor="middle" class="s">Kanalprotein</text>
+<text x="282" y="18" text-anchor="middle" class="s">Rezeptor</text>
+<text x="354" y="24" text-anchor="end" class="k">außen</text>
+<text x="354" y="192" text-anchor="end" class="k">innen</text>
+<circle cx="22" cy="196" r="6" class="gelb"/>
+<path d="M19 202V226M25 202V224" class="gelb-s w1"/>
+<text x="36" y="200" class="s">Kopf: hydrophil (zum Wasser)</text>
+<text x="36" y="222" class="s">Schwänze: hydrophob (innen)</text>
+</svg>

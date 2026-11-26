@@ -2,7 +2,7 @@ THEMA = dict(
     id='thrombose', titel='Thrombose, Gerinnungshemmung und Fibrinolyse', bereich='Blut und Immunsystem',
     kurz='Virchow-Trias, arteriell oder venös, endotheliale Antikoagulation, ASS, Heparin, Marcumar, NOAK, D-Dimere',
     lern=[
-        dict(h='Virchow-Trias', li=['Rudolf Virchow prägte die Begriffe Thrombose, Embolie und Leukämie'],
+        dict(h='Virchow-Trias', bild=dict(n='virchow', u='Virchow-Trias: die drei Ursachen, die eine Thrombose begünstigen.'), li=['Rudolf Virchow prägte die Begriffe Thrombose, Embolie und Leukämie'],
              tc=[['Komponente', 'Steht im Vordergrund bei …'], ['1. veränderter Blutfluss', 'Venen (Immobilisation, lange Reisen)'],
                  ['2. veränderte Gefäßwand', 'Arterien (Arteriosklerose, aufgebrochener Plaque)'],
                  ['3. veränderte Blutzusammensetzung (Thrombophilie)', 'Venen: Flüssigkeitsmangel, Tumoren (z. B. Pankreaskarzinom), Faktor-V-Leiden, APC-Resistenz, Protein-C/S-Mangel']],
@@ -38,7 +38,7 @@ THEMA = dict(
             ['**NOAK** (Rivaroxaban, Apixaban, Edoxaban)', 'hemmen direkt **Faktor Xa**', '1 Tablette täglich, weniger spontane Blutungen, wenig Kontrolle – aber teuer'],
         ], li=['**Vitamin K** entdeckte Henrik Dam (Nobelpreis 1943): Küken mit fettfreiem Futter bluteten; „K“ für Koagulation'],
              q=[('GE', '14–15')]),
-        dict(h='Fibrinolyse', fl=dict(s=[['Endothel bildet tPA'], ['tPA wandelt Plasminogen in **Plasmin**'], ['Plasmin spaltet die Fibrinfäden'], ['Spaltprodukte: **D-Dimere**']]),
+        dict(h='Fibrinolyse', bild=dict(n='fibrinolyse', u='Fibrinolyse: tPA aus dem Endothel macht aus Plasminogen **Plasmin**, das das Fibrinnetz zerschneidet. Die Spaltstücke (D-Dimere) zeigen eine laufende Gerinnung an.'), fl=dict(s=[['Endothel bildet tPA'], ['tPA wandelt Plasminogen in **Plasmin**'], ['Plasmin spaltet die Fibrinfäden'], ['Spaltprodukte: **D-Dimere**']]),
              li=['**D-Dimere im Blut** → irgendwo läuft Gerinnung und gleichzeitig Fibrinolyse → Hinweis auf Thrombose',
                  'Bei Lungenembolie reicht die eigene Fibrinolyse nicht → **Fibrinolytika** (Streptokinase, Urokinase) aktivieren mehr Plasmin; auch bei Schlaganfall oder Herzinfarkt, wenn kein Katheter möglich ist'],
              m='Unter Fibrinolytika steigt die **Blutungsgefahr** erheblich.', q=[('GE', '15–16')]),

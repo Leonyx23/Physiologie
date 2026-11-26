@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 144">
+<path d="M12 60C10 34 40 24 58 34C76 40 80 70 66 86C50 98 22 94 14 78Z" class="grau"/>
+<circle cx="32" cy="62" r="9" class="lila-v"/>
+<path d="M64 42l8 -6M66 50l9 -2" class="akz-s w2"/>
+<rect x="70" y="34" width="16" height="9" rx="4" class="gruen" transform="rotate(-20 78 38)"/>
+<path d="M104 66C100 40 130 26 150 36C160 26 178 30 176 44C170 50 160 44 156 50C152 56 160 62 170 62C178 66 172 84 158 88C140 98 110 90 104 66Z" class="grau"/>
+<circle cx="124" cy="70" r="9" class="lila-v"/>
+<rect x="154" y="44" width="16" height="9" rx="4" class="gruen"/>
+<path d="M196 60C194 34 222 24 244 32C266 38 272 70 258 86C242 98 210 96 200 80Z" class="grau"/>
+<circle cx="214" cy="74" r="9" class="lila-v"/>
+<circle cx="240" cy="54" r="13" class="bg-v"/>
+<circle cx="240" cy="54" r="13" class="w1"/>
+<rect x="232" y="50" width="16" height="9" rx="4" class="gruen"/>
+<circle cx="252" cy="72" r="5" class="gelb"/>
+<circle cx="258" cy="62" r="4" class="gelb"/>
+<circle cx="228" cy="40" r="4" class="gelb"/>
+<path d="M286 60C284 34 312 24 334 32C356 38 360 70 348 86C332 98 300 96 290 80Z" class="grau"/>
+<circle cx="304" cy="74" r="9" class="lila-v"/>
+<circle cx="330" cy="54" r="13" class="gelb"/>
+<rect x="324" y="50" width="5" height="4" rx="1" class="gruen-v"/>
+<rect x="331" y="56" width="5" height="4" rx="1" class="gruen-v"/>
+<rect x="333" y="48" width="4" height="4" rx="1" class="gruen-v"/>
+<text x="45" y="120" text-anchor="middle" class="s f">1 erkennen</text>
+<text x="45" y="137" text-anchor="middle" class="k">PRR</text>
+<text x="138" y="120" text-anchor="middle" class="s f">2 umfließen</text>
+<text x="138" y="137" text-anchor="middle" class="k">Endozytose</text>
+<text x="228" y="120" text-anchor="middle" class="s f">3 Lysosomen</text>
+<text x="228" y="137" text-anchor="middle" class="k">Enzyme</text>
+<text x="318" y="120" text-anchor="middle" class="s f">4 auflösen</text>
+<text x="318" y="137" text-anchor="middle" class="k">zerlegt</text>
+</svg>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 164">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M0 0L10 5L0 10z" class="grau-v"/></marker></defs>
+<circle cx="36" cy="50" r="27" class="grau"/>
+<circle cx="24" cy="44" r="6.5" class="lila-v"/>
+<circle cx="34" cy="58" r="6.5" class="lila-v"/>
+<circle cx="46" cy="46" r="6.5" class="lila-v"/>
+<circle cx="48" cy="60" r="6.5" class="lila-v"/>
+<path d="M24 44L34 58L46 46L48 60" class="lila-s w2"/>
+<circle cx="108" cy="50" r="23" class="grau"/>
+<circle cx="110" cy="51" r="19" class="lila-v"/>
+<circle cx="180" cy="50" r="31" class="grau"/>
+<path d="M164 38C176 30 196 32 198 44C200 52 190 54 186 50C182 58 196 64 190 70C180 76 160 70 160 56C160 48 160 42 164 38Z" class="lila-v"/>
+<circle cx="252" cy="50" r="27" class="grau"/>
+<circle cx="248.2" cy="57.6" r="2.3" class="rot-v"/>
+<circle cx="248.5" cy="45.2" r="2.3" class="rot-v"/>
+<circle cx="239" cy="47" r="2.3" class="rot-v"/>
+<circle cx="266.6" cy="55.6" r="2.3" class="rot-v"/>
+<circle cx="266.1" cy="53.4" r="2.3" class="rot-v"/>
+<circle cx="258" cy="52.8" r="2.3" class="rot-v"/>
+<circle cx="234.2" cy="59.1" r="2.3" class="rot-v"/>
+<circle cx="259.4" cy="57.3" r="2.3" class="rot-v"/>
+<circle cx="237.1" cy="34.6" r="2.3" class="rot-v"/>
+<circle cx="239.7" cy="43.5" r="2.3" class="rot-v"/>
+<circle cx="256.7" cy="49.3" r="2.3" class="rot-v"/>
+<circle cx="259.5" cy="40.8" r="2.3" class="rot-v"/>
+<circle cx="256.7" cy="55.9" r="2.3" class="rot-v"/>
+<circle cx="244.9" cy="68.5" r="2.3" class="rot-v"/>
+<circle cx="259.1" cy="65.2" r="2.3" class="rot-v"/>
+<circle cx="243.4" cy="39.7" r="2.3" class="rot-v"/>
+<circle cx="246.7" cy="48.4" r="2.3" class="rot-v"/>
+<circle cx="261.3" cy="53.7" r="2.3" class="rot-v"/>
+<circle cx="245.9" cy="37" r="2.3" class="rot-v"/>
+<circle cx="245.4" cy="65.5" r="2.3" class="rot-v"/>
+<circle cx="240.5" cy="53.5" r="2.3" class="rot-v"/>
+<circle cx="257.1" cy="32.3" r="2.3" class="rot-v"/>
+<circle cx="252.6" cy="66.7" r="2.3" class="rot-v"/>
+<circle cx="231.7" cy="46.8" r="2.3" class="rot-v"/>
+<circle cx="250.5" cy="38.3" r="2.3" class="rot-v"/>
+<circle cx="259.5" cy="49.1" r="2.3" class="rot-v"/>
+<circle cx="242" cy="48" r="8" class="lila-v"/>
+<circle cx="262" cy="52" r="8" class="lila-v"/>
+<line x1="242" y1="48" x2="262" y2="52" class="lila-s w3"/>
+<circle cx="324" cy="50" r="27" class="grau"/>
+<path d="M314 40C324 34 336 44 330 52C324 60 334 66 326 68" class="lila-s w3"/>
+<circle cx="307.3" cy="59.4" r="2.3" class="blau-v"/>
+<circle cx="332.9" cy="62.6" r="2.3" class="blau-v"/>
+<circle cx="341.4" cy="54.4" r="2.3" class="blau-v"/>
+<circle cx="325.5" cy="33.4" r="2.3" class="blau-v"/>
+<circle cx="332.7" cy="41.3" r="2.3" class="blau-v"/>
+<circle cx="318.3" cy="34" r="2.3" class="blau-v"/>
+<circle cx="311" cy="42.8" r="2.3" class="blau-v"/>
+<circle cx="335.5" cy="31.9" r="2.3" class="blau-v"/>
+<circle cx="306.3" cy="52.9" r="2.3" class="blau-v"/>
+<circle cx="341.1" cy="56.9" r="2.3" class="blau-v"/>
+<circle cx="310.8" cy="32.5" r="2.3" class="blau-v"/>
+<circle cx="329.1" cy="39.4" r="2.3" class="blau-v"/>
+<circle cx="310.4" cy="61.8" r="2.3" class="blau-v"/>
+<circle cx="338.8" cy="52.1" r="2.3" class="blau-v"/>
+<circle cx="327.7" cy="56.6" r="2.3" class="blau-v"/>
+<circle cx="342" cy="57" r="2.3" class="blau-v"/>
+<circle cx="331.5" cy="57.9" r="2.3" class="blau-v"/>
+<circle cx="308.1" cy="63" r="2.3" class="blau-v"/>
+<circle cx="336.9" cy="57.2" r="2.3" class="blau-v"/>
+<circle cx="304.3" cy="43.7" r="2.3" class="blau-v"/>
+<circle cx="332.6" cy="31.5" r="2.3" class="blau-v"/>
+<circle cx="321.5" cy="64" r="2.3" class="blau-v"/>
+<circle cx="310.9" cy="66" r="2.3" class="blau-v"/>
+<circle cx="332.2" cy="47.8" r="2.3" class="blau-v"/>
+<circle cx="328.7" cy="59.5" r="2.3" class="blau-v"/>
+<circle cx="325.6" cy="65.2" r="2.3" class="blau-v"/>
+<circle cx="314.4" cy="44" r="2.3" class="blau-v"/>
+<circle cx="338.2" cy="50.4" r="2.3" class="blau-v"/>
+<circle cx="312.7" cy="62.1" r="2.3" class="blau-v"/>
+<circle cx="341.5" cy="44.7" r="2.3" class="blau-v"/>
+<text x="36" y="104" text-anchor="middle" class="s">Neutrophil</text>
+<text x="36" y="121" text-anchor="middle" class="k i">Never</text>
+<text x="108" y="104" text-anchor="middle" class="s">Lymphozyt</text>
+<text x="108" y="121" text-anchor="middle" class="k i">Let</text>
+<text x="180" y="104" text-anchor="middle" class="s">Monozyt</text>
+<text x="180" y="121" text-anchor="middle" class="k i">Monkeys</text>
+<text x="252" y="104" text-anchor="middle" class="s">Eosinophil</text>
+<text x="252" y="121" text-anchor="middle" class="k i">Eat</text>
+<text x="324" y="104" text-anchor="middle" class="s">Basophil</text>
+<text x="324" y="121" text-anchor="middle" class="k i">Bananas</text>
+<line x1="30" y1="140" x2="330" y2="140" class="grau-s" marker-end="url(#a)"/>
+<text x="30" y="158" class="k">am häufigsten</text>
+<text x="330" y="158" text-anchor="end" class="k">am seltensten</text>
+</svg>

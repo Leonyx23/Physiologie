@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240">
+<path d="M10 236C10 170 170 170 170 236" class="grau"/>
+<circle cx="90" cy="52" r="40" class="rot"/>
+<path d="M80 186V160M100 186V160M80 160C76 150 78 144 82 140M100 160C104 150 102 144 98 140" class="w2"/>
+<rect x="81" y="136" width="18" height="7" rx="3" class="lila-v"/>
+<path d="M81 92V116M99 92V116M81 116L80 128M99 116L100 128" class="w2"/>
+<path d="M116 86V150" class="w2"/>
+<text x="122" y="124" class="s f">CD8</text>
+<text x="90" y="47" text-anchor="middle" class="s f">T-Killer-</text>
+<text x="90" y="63" text-anchor="middle" class="s f">zelle</text>
+<text x="68" y="146" text-anchor="end" class="s f">MHC I</text>
+<text x="90" y="212" text-anchor="middle" class="s">jede Körperzelle</text>
+<text x="90" y="228" text-anchor="middle" class="k">Peptid von innen</text>
+<path d="M190 236C190 170 350 170 350 236" class="akz"/>
+<circle cx="270" cy="52" r="40" class="blau"/>
+<path d="M260 186V160M280 186V160M260 160C256 150 258 144 262 140M280 160C284 150 282 144 278 140" class="w2"/>
+<rect x="261" y="136" width="18" height="7" rx="3" class="gruen-v"/>
+<path d="M261 92V116M279 92V116M261 116L260 128M279 116L280 128" class="w2"/>
+<path d="M296 86V150" class="w2"/>
+<text x="302" y="124" class="s f">CD4</text>
+<text x="270" y="47" text-anchor="middle" class="s f">T-Helfer-</text>
+<text x="270" y="63" text-anchor="middle" class="s f">zelle</text>
+<text x="248" y="146" text-anchor="end" class="s f">MHC II</text>
+<text x="270" y="212" text-anchor="middle" class="s">dendritische Zelle</text>
+<text x="270" y="228" text-anchor="middle" class="k">Stück vom Erreger</text>
+<line x1="180" y1="10" x2="180" y2="236" class="grau-s w1 d"/>
+</svg>

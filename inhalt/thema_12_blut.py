@@ -24,7 +24,7 @@ THEMA = dict(
             ['mehr Plasma', '↓', 'Niereninsuffizienz'],
             ['weniger Plasma', '↑', 'Exsikkose, Durchfall, Erbrechen, starkes Schwitzen'],
         ], li=['Leukozyten und Thrombozyten machen 10- bzw. 100-mal weniger Volumen aus – sie beeinflussen den Hk praktisch nicht'], q=[('BL', 4)]),
-        dict(h='Die Blutzellen', tb=[
+        dict(h='Die Blutzellen', bild=dict(n='blutzellen', u='Die drei Blutzellarten ungefähr im Größenverhältnis; die Zahlen sind die Anzahl pro µl Blut. Erythrozyten sind kernlos und in der Mitte eingedellt (Seitenansicht).'), tb=[
             ['Zelle', 'Größe', 'Anzahl pro µl', 'Lebensdauer', 'Aufgabe'],
             ['**Erythrozyten** (rote Blutkörperchen)', '7,5 µm', '**4–5 Mio.**', '**120 Tage**', 'O₂-Transport mit Hämoglobin, auch CO₂ und pH; kernlos'],
             ['**Thrombozyten** (Blutplättchen)', '1–3 µm', '**150.000–300.000** (Skript Blut: bis 350.000)', '**8–10 Tage**', 'Gerinnung; kernlos, aus Megakaryozyten'],
@@ -33,7 +33,7 @@ THEMA = dict(
              li=['Mehr als 10.000 Leukozyten/µl = **Leukozytose** (z. B. Entzündung)',
                  'Name: griech. leukos = weiß (weiße Schicht im Röhrchen); Granulozyten nach den Granula (lat. Körnchen)'],
              q=[('BL', '2–3'), ('GE', 2)]),
-        dict(h='Leukozyten im Blut – der Häufigkeit nach', fl=dict(s=[['Neutrophile Granulozyten', '„Never“'], ['Lymphozyten', '„Let“'], ['Monozyten', '„Monkeys“'],
+        dict(h='Leukozyten im Blut – der Häufigkeit nach', bild=dict(n='leukozyten', u='Die 5 Leukozytenarten im Blut, von häufig nach selten – Merksatz **Never Let Monkeys Eat Bananas**.'), fl=dict(s=[['Neutrophile Granulozyten', '„Never“'], ['Lymphozyten', '„Let“'], ['Monozyten', '„Monkeys“'],
                                                                       ['Eosinophile Granulozyten', '„Eat“ – Granula rot'], ['Basophile Granulozyten', '„Bananas“ – Granula blau']]),
              li=['**Nur im Gewebe:** Makrophagen (ausgewanderte Monozyten), dendritische Zellen, Mastzellen',
                  '**Monozyten** sind die größten Blutzellen (nicht die häufigsten!), mit nierenförmigem Kern'],

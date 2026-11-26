@@ -1,0 +1,46 @@
+THEMA = dict(
+    id='durchblutung', titel='Herzzeitvolumen und Organdurchblutung', bereich='Herz und Kreislauf',
+    kurz='Ischämietoleranz, Verteilung des HZV, spezifische Durchblutung, Zentralisation im Schock',
+    lern=[
+        dict(h='Grundprinzipien', li=[
+            'Organe haben einen unterschiedlich hohen Energiebedarf → unterschiedliche **Ischämietoleranz** (wie lange ein Organ ohne Durchblutung überlebt)',
+            'Organe können ihre Durchblutung je nach Lage stark verändern:',
+            ['Beispiele', '**Sport:** Muskulatur braucht viel Blut (Glukose, Fettsäuren, O₂, Abtransport von CO₂)',
+             '**Verdauung:** mehr Blut für Darm und Leber (Nährstoffe aufnehmen, Giftstoffe entfernen)',
+             '**Überhitzung:** mehr Hautdurchblutung zur Kühlung',
+             '**Schock:** lebenswichtige Organe mit geringer Ischämietoleranz haben Vorrang'],
+        ], q=[('HK', 6)]),
+        dict(h='Ischämietoleranz', tb=[
+            ['Organ', 'Dauer ohne Blut', 'Folge'],
+            ['Gehirn', '2–3 s', 'Ohnmacht'], ['Gehirn', '2–3 min', 'irreversible Schäden der Hirnrinde'], ['Gehirn', '8 min', 'irreversibler Hirntod'],
+            ['Herz', '15–30 min', 'Herzinfarkt'], ['Niere, Leber', '2–3 h', 'Nieren- bzw. Leberversagen'], ['Darm', '6 h', 'Darminfarkt, Sepsis'],
+            ['Extremitäten', '2–4 h / 6–8 h / 8–12 h', 'Nervenschäden / Muskelnekrosen / Hautnekrosen'],
+        ], li=['**Kälte verlängert die Ischämietoleranz**, weil der Stoffwechsel langsamer läuft',
+               'Gehirn: sehr anspruchsvoll · Muskel: mittendrin · Herz: „Allesfresser“ (nutzt sogar Laktat). Mehr Kapillaren = mehr Spielraum'],
+             q=[('HK', 6), ('HK', 5), ('HKP', 3)]),
+        dict(h='Durchblutung in Ruhe und maximal', tb=[
+            ['Organ', 'Ruhe (l/min)', 'Maximum (l/min)', 'Steigerung'],
+            ['Skelettmuskel', '0,75', '18', '24-fach'], ['Haut', '0,2', '3,8', '19-fach'], ['Speicheldrüsen', '0,02', '0,25', '12-fach'],
+            ['Verdauungssystem', '0,7', '5,5', '8-fach'], ['Leber', '0,5', '3,0', '6-fach'], ['Myokard', '0,21', '1,2', '5-fach'],
+            ['Fettgewebe', '0,8', '3,0', '4-fach'], ['Gehirn', '0,75', '2,1', '3-fach'], ['Nieren', '1,2', '1,4', '1,2-fach'],
+        ], br=dict(s=[['Skelettmuskel', 24, '24×'], ['Haut', 19, '19×'], ['Speicheldrüsen', 12, '12×'], ['Verdauung', 8, '8×'], ['Leber', 6, '6×'],
+                      ['Myokard', 5, '5×'], ['Fettgewebe', 4, '4×'], ['Gehirn', 3, '3×'], ['Nieren', 1.2, '1,2×']], c='Maximale Steigerung der Durchblutung'),
+             q=[('HK', 7)]),
+        dict(h='Wer bekommt wie viel vom HZV?', li=[
+            'In Ruhe ist der **Darm** mit ca. 30 % der größte „Verbraucher“',
+            '**Gehirn** 15 % – gemessen an seiner Größe sehr viel (hohe spezifische Durchblutung)',
+            '**Nieren** 20 % – nötig für die Blutwäsche',
+            '**Muskulatur** nur 15 % in Ruhe, unter Belastung bis zum **20-Fachen**',
+            '**Haut und Fettgewebe** ca. 20 % – lassen sich im Notfall gefahrlos drosseln (Zentralisation)',
+            '**Herz** braucht 5 % für sich selbst (Koronardurchblutung)',
+        ], q=[('HK', 7)]),
+        dict(h='Spezifische Durchblutung (ml Blut pro Minute pro Gramm)', li=[
+            'Am höchsten: **Niere**, dann **Gehirn** und **Myokard**',
+            'Die Niere kann ihre ohnehin hohe Durchblutung kaum steigern',
+            'Stark steigern können: Speicheldrüsen, Myokard (Sport, Stress), Gehirn (Prüfung), Skelettmuskel (Training), Verdauung (Essen), Haut (Hitze)',
+            'Alle Maxima zusammen ergäben ein theoretisches HZV von 38 l/min – das geht nicht gleichzeitig. Wer hart trainiert, sollte nicht gerade essen oder überhitzen',
+            'Das Sportlerherz kann das HZV etwa **vervierfachen** – nur so ist die 20-fache Muskeldurchblutung möglich',
+        ], m='**Schock:** Der Sympathikus drosselt Haut, Fett und Verdauung zugunsten von Gehirn und Herz (**Zentralisation**) → Blässe, weniger Urin.',
+             q=[('HK', 8), ('HKG', 2)]),
+    ],
+)

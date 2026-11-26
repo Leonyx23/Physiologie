@@ -1,0 +1,58 @@
+THEMA = dict(
+    id='niere', titel='Aufbau und Funktion der Niere', bereich='Niere und Wasserhaushalt',
+    kurz='Lage, Aufgaben, Nephron, glomeruläre Filtration, Tubulus, Gegenstromprinzip, Diuretika',
+    lern=[
+        dict(h='Lage und Aufbau', li=[
+            'Zwei Nieren, je ca. **12 × 5 × 4 cm**, im **Retroperitoneum** neben der Wirbelsäule (BWK 12), direkt unter dem Zwerchfell',
+            'Die rechte Niere liegt etwas tiefer; ihr unterer Pol auf Höhe des Bauchnabels',
+            'Auf den oberen Polen sitzen die **Nebennieren** – sie gehören nicht zur Niere und haben eigene Aufgaben',
+            '**Rinde:** Glomeruli, proximale und distale Tubuli · **Mark:** Henle-Schleifen und Sammelrohre · dann Nierenkelche und Nierenbecken',
+        ], q=[('EX5', 1)]),
+        dict(h='Aufgaben der Niere', tb=[
+            ['Aufgabe', 'Beispiele'],
+            ['Harn bilden, entgiften', 'Medikamente, Umweltgifte, Abfallprodukte: Harnstoff (Eiweiß), Harnsäure (Purine), Kreatinin (Muskel)'],
+            ['Regulation', 'Säure-Basen-Haushalt, Wasser- und Elektrolythaushalt, Blutdruck (langfristig: Blutvolumen, Angiotensin II), Calciumhaushalt, Gluconeogenese'],
+            ['Hormone', '**Renin** (Blutdruck), **Erythropoietin** (Blutbildung), aktives **Vitamin D₃** (Calcium)'],
+        ], q=[('EX5', '1–2')]),
+        dict(h='Das Nephron', li=[
+            'Kleinste Funktionseinheit; ca. **1 Mio. Nephrone** pro Niere – mit 80 Jahren nur noch etwa ⅓. Deshalb sind Ältere anfälliger für Nierenversagen bei Flüssigkeitsmangel, und Medikamente müssen niedriger dosiert werden',
+        ], fl=dict(s=[['Glomerulus', 'Gefäßknäuel in der Bowman-Kapsel: Filtration'], ['Proximaler Tubulus', '60 % der Rückresorption, Sekretion'],
+                      ['Henle-Schleife', 'Gegenstromprinzip'], ['Distaler Tubulus', 'Ca²⁺ (Parathormon), Na⁺ (RAAS)'], ['Sammelrohr', 'Wasser (ADH)']]),
+             m='**Zwei Kapillarsysteme hintereinander:** Die Arteriole bildet erst den Glomerulus und verlässt ihn wieder **als Arteriole** (nur Filtration, kein Stoffaustausch). Erst danach versorgt sie das Kapillarnetz entlang der Tubuli, das Energie für Resorption und Sekretion liefert.',
+             q=[('EX5', '2–3'), ('EX5', 5)]),
+        dict(h='Glomeruläre Filtration', li=[
+            'Durch die Nieren fließen ca. **1500 l Blut pro Tag** – etwa 20 % des HZV bzw. das 300-Fache des Blutvolumens (im Skript steht „300-mal das HZV“)',
+            'Daraus filtrieren die Glomeruli **180 l Primärharn** pro Tag = **GFR 120 ml/min**',
+            'Filtration ist passiv (Druck); Resorption und Sekretion im Tubulus sind **aktiv** und verbrauchen Energie',
+        ], m='**Netto-Filtrationsdruck = hydrostatischer Druck − (kolloidosmotischer Druck + Gegendruck der Bowman-Kapsel)**',
+             br=dict(s=[['hydrostatischer Druck', 55, '55 mmHg'], ['kolloidosmotischer Druck', 27.5, '25–30 mmHg'], ['Gegendruck Bowman-Kapsel', 15, '15 mmHg'], ['effektiv', 10, '≈ 10 mmHg']],
+                     c='Druckbilanz am Glomerulus'),
+             q=[('EX5', 3)]),
+        dict(h='Was die Filtration beeinflusst', li=[
+            'Der hydrostatische Druck hängt vom arteriellen Druck und vom **Bayliss-Effekt** ab',
+            '**Weite zuführende** und **enge abführende** Arteriole erhöhen den Druck im Glomerulus',
+            'Das Endothel der zuführenden Arteriole bildet **Prostaglandin E₂** und **Prostazyklin** → Vasodilatation. Medikamente, die die Cyclooxygenase hemmen (z. B. Aspirin, NSAR), können die Nierendurchblutung verschlechtern',
+            '**Filter:** fenestriertes Endothel + doppelte Basalmembran + Ausläufer der **Podozyten**; nur kleine Teilchen (laut Skript bis 14 kDa, 4–20 nm) passieren; negative Ladung hält Anionen zurück',
+            '**Mesangiumzellen:** Stützzellen, bilden PGE₂, können phagozytieren',
+        ], q=[('EX5', 4)]),
+        dict(h='Der Tubulus', tb=[
+            ['Abschnitt', 'Was passiert'],
+            ['Proximaler Tubulus', 'Rückresorption von Na⁺, Glukose, Bicarbonat, Aminosäuren …; Sekretion organischer An- und Kationen (Harnsäure, Medikamente, Schadstoffe)'],
+            ['Henle-Schleife', 'Gegenstromprinzip: hohe Osmolarität im Mark (NKCC2)'],
+            ['Distaler Tubulus', 'Ca²⁺-Rückresorption (Nebenschilddrüse); Mess- und Na⁺-Resorptionsort für das RAAS'],
+            ['Sammelrohr', 'Wasserrückresorption unter ADH aus der Neurohypophyse'],
+        ], li=['Die Tubuluszellen haben eine Seite zum Lumen (**apikal**) und eine zum Blut (**basolateral**). Die basolaterale **Na⁺/K⁺-ATPase** treibt die Resorption an',
+               '**Na⁺ + Bicarbonat:** Na⁺/H⁺-Austauscher und Carboanhydrase (CO₂ + H₂O ⇌ H₂CO₃)',
+               '**SGLT2** holt Glukose mit Na⁺ zurück. **Gliflozine** („-flozin“) blockieren ihn → mehr Zucker im Urin, niedrigerer Blutzucker; auch Standard bei Herzinsuffizienz',
+               '**Sekretion:** OAT1 (organische Anionen), OCT2 (organische Kationen) – so werden Medikamente und Schadstoffe ausgeschieden, die den Filter nicht passieren'],
+             q=[('EX5', '5–6')]),
+        dict(h='Das Gegenstromprinzip', fl=dict(s=[
+            ['Aufsteigender Ast', 'NKCC2 pumpt Na⁺, K⁺, 2 Cl⁻ ins Gewebe; für Wasser **undurchlässig**'],
+            ['Nierenmark wird salzig', 'Osmolarität steigt von der Rinde zum Mark: 400 → 1200 mosmol/l'],
+            ['Absteigender Ast', 'sehr **wasserdurchlässig** → Wasser folgt dem osmotischen Sog ins Gewebe'],
+            ['Primärharn wird konzentriert', 'treibt wiederum den NKCC2 an']], loop=True),
+             li=['So entsteht im Mark mit wenig Energie eine hohe Osmolarität – Voraussetzung, dass das Sammelrohr Wasser zurückholen kann'],
+             m='**Schleifendiuretika** (Furosemid, Torasemid) blockieren den NKCC2 → viel Urin. Gefahr: **Hypokaliämie** (K⁺ unter 3,5 mmol/l). Diuretika helfen bei Herzinsuffizienz mit Ödemen, anderen Ödemen, Niereninsuffizienz und Hypertonie.',
+             q=[('EX5', '5, 7–8')]),
+    ],
+)

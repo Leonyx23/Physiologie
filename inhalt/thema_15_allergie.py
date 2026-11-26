@@ -1,0 +1,48 @@
+THEMA = dict(
+    id='allergie', titel='Allergie und Autoimmunität (Coombs und Gell)', bereich='Blut und Immunsystem',
+    kurz='Die vier Reaktionstypen, Sensibilisierung, Histamin, Fallbeispiele, Transplantation',
+    lern=[
+        dict(h='Die vier Typen nach Coombs und Gell', tb=[
+            ['Typ', 'Mechanismus', 'Zeit', 'Beispiele'],
+            ['**I – Soforttyp**', 'Allergen vernetzt zwei **IgE** auf Mastzellen → Histamin', 'Sekunden bis Minuten', 'Heuschnupfen, Asthma, Insektenstich-Anaphylaxie, Nahrungsmittelallergie'],
+            ['**II – zytotoxisch**', 'Antikörper (IgG/IgM) gegen Antigene **auf Zellen** → Agglutination, Opsonierung, Komplement', 'Stunden bis Tage', 'Transfusionszwischenfall, Rhesusunverträglichkeit, autoimmunhämolytische Anämie nach Penicillin, Myasthenia gravis, HIT II'],
+            ['**III – Immunkomplexe**', 'lösliche Antigen-Antikörper-Komplexe lagern sich an kleinen Gefäßen ab → Komplement, Neutrophile', 'Tage bis Wochen', 'rheumatisches Fieber nach Scharlach, exogen allergische Alveolitis (Farmerlunge, Bäckerasthma), Serumkrankheit'],
+            ['**IV – Spättyp**', '**T-Zellen**, keine Antikörper', 'verzögert (Tage)', 'Kontaktekzem (Nickel), Masern-/Rötelnausschlag, Transplantatabstoßung, Zöliakie'],
+        ], q=[('IM', '29–36')]),
+        dict(h='Allergene', li=['Allergene sind an sich **harmlose** Antigene'],
+             tc=[['Weg', 'Beispiele'], ['Nahrung', 'Nüsse, Schokolade, Erdbeeren, Kiwi, Gewürze'], ['Einatmen', 'Pollen (Gräser, Bäume), Hausstaub (Milbenkot), Tierhaare (Hund, Katze, Pferd)'],
+                 ['Medikamente', 'Antibiotika, Schmerzmittel'], ['Gifte', 'Insekten, Schlangen, Quallen']],
+             q=[('IM', '29–30')]),
+        dict(h='Typ I: Sensibilisierung und Auslösung', fl=dict(s=[
+            ['B-Zelle nimmt das Allergen auf', 'über ihren B-Zell-Rezeptor'], ['Präsentation auf MHC II'], ['Aktivierung durch T-Helferzellen'],
+            ['B-Zelle wird Plasmazelle', 'bildet **IgE**'], ['IgE bindet mit Fc an Mastzellen', 'Sensibilisierung abgeschlossen'],
+            ['Erneuter Kontakt', 'Allergen verbindet zwei IgE (**Crosslinking**) → Histamin']]),
+             li=['**Mastzellen** stammen aus der myeloischen Vorläuferzelle und sitzen unter der Schleimhaut von Darm und Atemwegen sowie in der Haut; Granula mit **Histamin und Heparin**'],
+             tc=[['Histamin an …', 'Wirkung'], ['Bronchien', 'Spasmus → Atemnot, Stridor'], ['Haut', 'juckende Quaddeln (Urtikaria)'],
+                 ['Gefäßen', 'Erweiterung → Kreislaufkollaps'], ['Darm', 'Durchfall, Erbrechen, Bauchschmerzen']],
+             m='Vor jeder Allergie muss eine **Sensibilisierung** stattgefunden haben – beim ersten Kontakt gibt es noch kein passendes IgE.',
+             q=[('IM', '30–31')]),
+        dict(h='Fallbeispiele aus dem Skript', tb=[
+            ['Fall', 'Typ', 'Erklärung'],
+            ['Fußballer mit Wespenallergie kollabiert 5 min nach dem Stich', 'I', 'anaphylaktischer Schock → Schocklage, Notruf'],
+            ['Quaddeln 30 min nach erster Penicillin-Tablette', 'I', 'Arzneimittelallergie'],
+            ['Kind auf dem Pony: Tränen, Schnupfen, dann Asthmaanfall', 'I', 'Tierhaarallergie'],
+            ['Bedside-Test: Spender- und Empfängerblut verklumpen im Feld A', 'II', 'Blutgruppen passen – Transfusion möglich'],
+            ['Schwindel und große Milz eine Woche nach Penicillin', 'II', 'autoimmunhämolytische Anämie'],
+            ['Rhesus-negative Mutter, zweites Rhesus-positives Kind', 'II', 'IgG gehen über die Plazenta → Morbus haemolyticus neonatorum'],
+            ['3 Wochen nach Scharlach: Gelenkschmerzen, Blut im Urin', 'III', 'rheumatisches Fieber mit Glomerulonephritis'],
+            ['Anstieg der Leberwerte nach Lebertransplantation', 'IV', 'Abstoßung → mehr Immunsuppressiva'],
+            ['Juckende, nässende Stelle unter dem Jeansknopf', 'IV', 'Nickel-Kontaktekzem'],
+            ['Wochenlanger Durchfall, Geschwüre im Duodenum', 'IV', 'Zöliakie (Gluten auf HLA-II, T-Zellen greifen den Darm an)'],
+        ], q=[('IM', '31–37')]),
+        dict(h='Typ II und III unterscheiden', tb=[
+            ['', 'Typ II', 'Typ III'],
+            ['Antigen', 'an Zellmembran gebunden', 'löslich, bildet Immunkomplexe'],
+            ['Betroffen', 'die Zelle mit dem Antigen (z. B. Erythrozyt)', 'je nach Ablagerungsort: Gelenke, Nieren, Herzklappen'],
+        ], q=[('IM', '32–34')]),
+        dict(h='Transplantation und Immunsuppression', li=[
+            'Abstoßung entsteht v. a. durch unterschiedliche **MHC-(HLA-)Moleküle**: zytotoxische T-Zellen töten Zellen mit fremdem MHC',
+            'Medikamente greifen an Signal 1, 2 oder der Zellteilung an, z. B. **Ciclosporin, Tacrolimus** (Calcineurin), **Everolimus** (mTOR), **Mycophenolsäure**, **Belatacept** (Ko-Stimulation)',
+        ], q=[('IM', '38–39')]),
+    ],
+)

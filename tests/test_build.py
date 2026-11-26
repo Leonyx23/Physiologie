@@ -116,6 +116,7 @@ def test_build_embeds_json(tmp_path):
     assert 'Test </script> bleibt Text.' in json.dumps(payload, ensure_ascii=False)
     pwa = (tmp_path / 'pwa_plain.html').read_text(encoding='utf-8')
     assert 'manifest.webmanifest' in pwa and "serviceWorker" in pwa
+    assert '<meta name="robots" content="noindex' in pwa
 
 
 def test_build_refuses_invalid(tmp_path):

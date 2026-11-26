@@ -201,14 +201,15 @@ def _json(d):
     return s.replace('<', '\\u003c')
 
 
-PWA_HEAD = '''<link rel="manifest" href="manifest.webmanifest">
+PWA_HEAD = '''<meta name="robots" content="noindex, nofollow">
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Physiologie">
 '''
-PWA_TAIL = ("<script>if('serviceWorker' in navigator&&location.protocol==='https:'){"
+PWA_TAIL = ("<script>if('serviceWorker' in navigator&&(location.protocol==='https:'||/^(localhost|127\\.0\\.0\\.1)$/.test(location.hostname))){"
             "navigator.serviceWorker.register('sw.js').catch(function(){});}</script>\n")
 
 
